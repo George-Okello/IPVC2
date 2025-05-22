@@ -1,0 +1,2115 @@
+{
+  "batch_info": {
+    "folder_path": "temp_batch_upload",
+    "total_images": 20,
+    "processed_successfully": 20,
+    "failed_images": 0,
+    "total_batch_time": 15.769411,
+    "average_time_per_image": 0.78847055,
+    "timestamp": "2025-05-23T06:09:11.023827"
+  },
+  "failed_images": [],
+  "performance_analysis": {
+    "timing_stats": {
+      "fastest_time": 0.575775,
+      "slowest_time": 1.48993,
+      "average_time": 0.7633636500000002,
+      "median_time": 0.6973579999999999,
+      "std_dev_time": 0.23470996495297658
+    },
+    "complexity_ranking": {
+      "fastest_images": [
+        {
+          "filename": "05102009225.jpg",
+          "processing_time": 0.575775,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "05102009227.jpg",
+          "processing_time": 0.60093,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "06102009240.jpg",
+          "processing_time": 0.63002,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "05102009226.jpg",
+          "processing_time": 0.630093,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "06102009249.jpg",
+          "processing_time": 0.655048,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        }
+      ],
+      "slowest_images": [
+        {
+          "filename": "06102009243.jpg",
+          "processing_time": 0.749339,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "06102009246.jpg",
+          "processing_time": 0.76318,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "06102009255.jpg",
+          "processing_time": 0.771916,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "05102009229.jpg",
+          "processing_time": 1.407879,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        },
+        {
+          "filename": "05102009228.jpg",
+          "processing_time": 1.48993,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1
+        }
+      ]
+    },
+    "correlations": {
+      "time_vs_megapixels": 7.331796451478994e-16,
+      "time_vs_file_size": 0.3852645235714159,
+      "time_vs_codes_found": NaN,
+      "time_vs_strategies": NaN
+    },
+    "efficiency_metrics": {
+      "average_pixels_per_second": 2604708.0658601727,
+      "average_time_per_megapixel": 0.4062573958333334,
+      "images_with_codes_found": 20,
+      "detection_success_rate": 100.0
+    }
+  },
+  "detailed_results": [
+    {
+      "image_path": "temp_batch_upload/05102009225.jpg",
+      "processing_time": 0.575775,
+      "barcode_regions": [
+        [
+          624,
+          631,
+          581,
+          264,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "8001410088710",
+          "type": "EAN13",
+          "bbox": [
+            624,
+            631,
+            581,
+            264
+          ],
+          "polygon": [
+            [
+              624,
+              631
+            ],
+            [
+              624,
+              657
+            ],
+            [
+              627,
+              785
+            ],
+            [
+              629,
+              857
+            ],
+            [
+              630,
+              875
+            ],
+            [
+              631,
+              881
+            ],
+            [
+              911,
+              895
+            ],
+            [
+              1204,
+              892
+            ],
+            [
+              1205,
+              880
+            ],
+            [
+              1205,
+              746
+            ],
+            [
+              1204,
+              672
+            ],
+            [
+              1203,
+              636
+            ],
+            [
+              1202,
+              634
+            ],
+            [
+              905,
+              631
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "05102009225_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009225.jpg",
+        "full_path": "temp_batch_upload/05102009225.jpg",
+        "file_size_mb": 0.16930103302001953,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.594425,
+        "time_per_megapixel": 0.30959635416666664,
+        "time_per_mb": 3.5110535913251653,
+        "pixels_per_second": 3230012.1966606383
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/05102009226.jpg",
+      "processing_time": 0.630093,
+      "barcode_regions": [
+        [
+          484,
+          548,
+          630,
+          165,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "8001410088710",
+          "type": "EAN13",
+          "bbox": [
+            484,
+            548,
+            630,
+            165
+          ],
+          "polygon": [
+            [
+              484,
+              551
+            ],
+            [
+              484,
+              553
+            ],
+            [
+              492,
+              577
+            ],
+            [
+              499,
+              597
+            ],
+            [
+              523,
+              665
+            ],
+            [
+              539,
+              709
+            ],
+            [
+              541,
+              713
+            ],
+            [
+              847,
+              702
+            ],
+            [
+              1114,
+              630
+            ],
+            [
+              1112,
+              622
+            ],
+            [
+              1108,
+              610
+            ],
+            [
+              1091,
+              560
+            ],
+            [
+              1089,
+              556
+            ],
+            [
+              793,
+              548
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "05102009226_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009226.jpg",
+        "full_path": "temp_batch_upload/05102009226.jpg",
+        "file_size_mb": 0.1966571807861328,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.646058,
+        "time_per_megapixel": 0.3364885416666667,
+        "time_per_mb": 3.285199133931429,
+        "pixels_per_second": 2971869.398722715
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/05102009227.jpg",
+      "processing_time": 0.60093,
+      "barcode_regions": [
+        [
+          918,
+          418,
+          1,
+          320,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "8001410088710",
+          "type": "EAN13",
+          "bbox": [
+            918,
+            418,
+            1,
+            320
+          ],
+          "polygon": [
+            [
+              918,
+              418
+            ],
+            [
+              918,
+              422
+            ],
+            [
+              919,
+              738
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "05102009227_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009227.jpg",
+        "full_path": "temp_batch_upload/05102009227.jpg",
+        "file_size_mb": 0.16147708892822266,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.61472,
+        "time_per_megapixel": 0.3201666666666667,
+        "time_per_mb": 3.8068558461147766,
+        "pixels_per_second": 3123373.2431025505
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/05102009228.jpg",
+      "processing_time": 1.48993,
+      "barcode_regions": [
+        [
+          508,
+          526,
+          282,
+          575,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "8001410088710",
+          "type": "EAN13",
+          "bbox": [
+            508,
+            526,
+            282,
+            575
+          ],
+          "polygon": [
+            [
+              508,
+              1101
+            ],
+            [
+              516,
+              1101
+            ],
+            [
+              774,
+              1090
+            ],
+            [
+              790,
+              1089
+            ],
+            [
+              765,
+              526
+            ],
+            [
+              649,
+              526
+            ],
+            [
+              535,
+              529
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "05102009228_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009228.jpg",
+        "full_path": "temp_batch_upload/05102009228.jpg",
+        "file_size_mb": 0.2013101577758789,
+        "dimensions": {
+          "width": 1200,
+          "height": 1600
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 0.75
+      },
+      "performance_metrics": {
+        "processing_time": 1.512452,
+        "time_per_megapixel": 0.7877354166666667,
+        "time_per_mb": 7.513043637290432,
+        "pixels_per_second": 1269461.774654667
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/05102009229.jpg",
+      "processing_time": 1.407879,
+      "barcode_regions": [
+        [
+          576,
+          560,
+          276,
+          693,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "8001410088710",
+          "type": "EAN13",
+          "bbox": [
+            576,
+            560,
+            276,
+            693
+          ],
+          "polygon": [
+            [
+              576,
+              1253
+            ],
+            [
+              580,
+              1253
+            ],
+            [
+              586,
+              1252
+            ],
+            [
+              614,
+              1247
+            ],
+            [
+              666,
+              1237
+            ],
+            [
+              756,
+              1219
+            ],
+            [
+              840,
+              1201
+            ],
+            [
+              852,
+              1198
+            ],
+            [
+              845,
+              874
+            ],
+            [
+              827,
+              560
+            ],
+            [
+              821,
+              560
+            ],
+            [
+              741,
+              566
+            ],
+            [
+              703,
+              569
+            ],
+            [
+              605,
+              577
+            ],
+            [
+              581,
+              579
+            ],
+            [
+              577,
+              580
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "05102009229_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009229.jpg",
+        "full_path": "temp_batch_upload/05102009229.jpg",
+        "file_size_mb": 0.20151710510253906,
+        "dimensions": {
+          "width": 1200,
+          "height": 1600
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 0.75
+      },
+      "performance_metrics": {
+        "processing_time": 1.439938,
+        "time_per_megapixel": 0.7499677083333334,
+        "time_per_mb": 7.145487720594777,
+        "pixels_per_second": 1333390.743212555
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009240.jpg",
+      "processing_time": 0.63002,
+      "barcode_regions": [
+        [
+          371,
+          390,
+          877,
+          303,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            371,
+            390,
+            877,
+            303
+          ],
+          "polygon": [
+            [
+              371,
+              559
+            ],
+            [
+              371,
+              657
+            ],
+            [
+              373,
+              693
+            ],
+            [
+              1246,
+              686
+            ],
+            [
+              1247,
+              668
+            ],
+            [
+              1248,
+              568
+            ],
+            [
+              1248,
+              390
+            ],
+            [
+              799,
+              393
+            ],
+            [
+              372,
+              407
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009240_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009240.jpg",
+        "full_path": "temp_batch_upload/06102009240.jpg",
+        "file_size_mb": 0.13164043426513672,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.645387,
+        "time_per_megapixel": 0.33613906250000003,
+        "time_per_mb": 4.902650189531641,
+        "pixels_per_second": 2974959.2105201995
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009241.jpg",
+      "processing_time": 0.678317,
+      "barcode_regions": [
+        [
+          322,
+          377,
+          885,
+          294,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            322,
+            377,
+            885,
+            294
+          ],
+          "polygon": [
+            [
+              322,
+              409
+            ],
+            [
+              322,
+              553
+            ],
+            [
+              323,
+              623
+            ],
+            [
+              324,
+              671
+            ],
+            [
+              1207,
+              666
+            ],
+            [
+              1207,
+              658
+            ],
+            [
+              1205,
+              578
+            ],
+            [
+              1201,
+              450
+            ],
+            [
+              1198,
+              378
+            ],
+            [
+              323,
+              377
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009241_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009241.jpg",
+        "full_path": "temp_batch_upload/06102009241.jpg",
+        "file_size_mb": 0.17373180389404297,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.694105,
+        "time_per_megapixel": 0.3615130208333333,
+        "time_per_mb": 3.9952673283892604,
+        "pixels_per_second": 2766152.0951441065
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009242.jpg",
+      "processing_time": 0.67348,
+      "barcode_regions": [
+        [
+          387,
+          509,
+          805,
+          201,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            387,
+            509,
+            805,
+            201
+          ],
+          "polygon": [
+            [
+              387,
+              663
+            ],
+            [
+              388,
+              695
+            ],
+            [
+              389,
+              707
+            ],
+            [
+              773,
+              709
+            ],
+            [
+              1192,
+              710
+            ],
+            [
+              1192,
+              586
+            ],
+            [
+              777,
+              511
+            ],
+            [
+              393,
+              509
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009242_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009242.jpg",
+        "full_path": "temp_batch_upload/06102009242.jpg",
+        "file_size_mb": 0.16152667999267578,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.686978,
+        "time_per_megapixel": 0.35780104166666665,
+        "time_per_mb": 4.25303114031162,
+        "pixels_per_second": 2794849.3255970352
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009243.jpg",
+      "processing_time": 0.749339,
+      "barcode_regions": [
+        [
+          368,
+          507,
+          922,
+          128,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            368,
+            507,
+            922,
+            128
+          ],
+          "polygon": [
+            [
+              368,
+              507
+            ],
+            [
+              369,
+              517
+            ],
+            [
+              373,
+              537
+            ],
+            [
+              395,
+              635
+            ],
+            [
+              1290,
+              620
+            ],
+            [
+              1289,
+              612
+            ],
+            [
+              1280,
+              572
+            ],
+            [
+              1271,
+              534
+            ],
+            [
+              1267,
+              518
+            ],
+            [
+              1264,
+              508
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009243_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009243.jpg",
+        "full_path": "temp_batch_upload/06102009243.jpg",
+        "file_size_mb": 0.20781421661376953,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.766668,
+        "time_per_megapixel": 0.39930625000000003,
+        "time_per_mb": 3.6891989994355443,
+        "pixels_per_second": 2504343.470707007
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009244.jpg",
+      "processing_time": 0.712031,
+      "barcode_regions": [
+        [
+          396,
+          626,
+          811,
+          168,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            396,
+            626,
+            811,
+            168
+          ],
+          "polygon": [
+            [
+              396,
+              743
+            ],
+            [
+              396,
+              747
+            ],
+            [
+              781,
+              781
+            ],
+            [
+              1194,
+              794
+            ],
+            [
+              1200,
+              762
+            ],
+            [
+              1207,
+              684
+            ],
+            [
+              1207,
+              662
+            ],
+            [
+              820,
+              626
+            ],
+            [
+              407,
+              659
+            ],
+            [
+              405,
+              661
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009244_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009244.jpg",
+        "full_path": "temp_batch_upload/06102009244.jpg",
+        "file_size_mb": 0.1872262954711914,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.72784,
+        "time_per_megapixel": 0.3790833333333334,
+        "time_per_mb": 3.887488123226756,
+        "pixels_per_second": 2637942.404924159
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009245.jpg",
+      "processing_time": 0.748777,
+      "barcode_regions": [
+        [
+          418,
+          449,
+          800,
+          262,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            418,
+            449,
+            800,
+            262
+          ],
+          "polygon": [
+            [
+              418,
+              449
+            ],
+            [
+              418,
+              519
+            ],
+            [
+              420,
+              621
+            ],
+            [
+              421,
+              669
+            ],
+            [
+              422,
+              703
+            ],
+            [
+              423,
+              711
+            ],
+            [
+              1218,
+              706
+            ],
+            [
+              1214,
+              590
+            ],
+            [
+              1208,
+              458
+            ],
+            [
+              1207,
+              452
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009245_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009245.jpg",
+        "full_path": "temp_batch_upload/06102009245.jpg",
+        "file_size_mb": 0.2065134048461914,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.763622,
+        "time_per_megapixel": 0.3977197916666667,
+        "time_per_mb": 3.697687327216052,
+        "pixels_per_second": 2514333.0076922877
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009246.jpg",
+      "processing_time": 0.76318,
+      "barcode_regions": [
+        [
+          571,
+          479,
+          735,
+          215,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            571,
+            479,
+            735,
+            215
+          ],
+          "polygon": [
+            [
+              571,
+              479
+            ],
+            [
+              572,
+              505
+            ],
+            [
+              574,
+              555
+            ],
+            [
+              580,
+              675
+            ],
+            [
+              582,
+              691
+            ],
+            [
+              914,
+              693
+            ],
+            [
+              1306,
+              694
+            ],
+            [
+              1306,
+              682
+            ],
+            [
+              1305,
+              656
+            ],
+            [
+              1300,
+              564
+            ],
+            [
+              1295,
+              482
+            ],
+            [
+              1294,
+              480
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009246_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009246.jpg",
+        "full_path": "temp_batch_upload/06102009246.jpg",
+        "file_size_mb": 0.198333740234375,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.77781,
+        "time_per_megapixel": 0.405109375,
+        "time_per_mb": 3.9217230466225574,
+        "pixels_per_second": 2468469.1634203726
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009247.jpg",
+      "processing_time": 0.655629,
+      "barcode_regions": [
+        [
+          444,
+          427,
+          715,
+          246,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            444,
+            427,
+            715,
+            246
+          ],
+          "polygon": [
+            [
+              444,
+              433
+            ],
+            [
+              444,
+              477
+            ],
+            [
+              445,
+              527
+            ],
+            [
+              447,
+              621
+            ],
+            [
+              448,
+              649
+            ],
+            [
+              449,
+              673
+            ],
+            [
+              1159,
+              668
+            ],
+            [
+              1159,
+              612
+            ],
+            [
+              1158,
+              532
+            ],
+            [
+              1157,
+              474
+            ],
+            [
+              1156,
+              428
+            ],
+            [
+              796,
+              427
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009247_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009247.jpg",
+        "full_path": "temp_batch_upload/06102009247.jpg",
+        "file_size_mb": 0.16343116760253906,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.671371,
+        "time_per_megapixel": 0.34967239583333337,
+        "time_per_mb": 4.107974077703216,
+        "pixels_per_second": 2859819.6824110663
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009248.jpg",
+      "processing_time": 0.730616,
+      "barcode_regions": [
+        [
+          506,
+          474,
+          728,
+          245,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            506,
+            474,
+            728,
+            245
+          ],
+          "polygon": [
+            [
+              506,
+              475
+            ],
+            [
+              506,
+              557
+            ],
+            [
+              507,
+              621
+            ],
+            [
+              508,
+              675
+            ],
+            [
+              509,
+              719
+            ],
+            [
+              1234,
+              718
+            ],
+            [
+              1234,
+              696
+            ],
+            [
+              1233,
+              616
+            ],
+            [
+              1231,
+              528
+            ],
+            [
+              1230,
+              490
+            ],
+            [
+              1229,
+              478
+            ],
+            [
+              882,
+              474
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009248_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009248.jpg",
+        "full_path": "temp_batch_upload/06102009248.jpg",
+        "file_size_mb": 0.2098674774169922,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.746,
+        "time_per_megapixel": 0.3885416666666667,
+        "time_per_mb": 3.5546241331988258,
+        "pixels_per_second": 2573726.54155496
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009249.jpg",
+      "processing_time": 0.655048,
+      "barcode_regions": [
+        [
+          365,
+          455,
+          844,
+          286,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            365,
+            455,
+            844,
+            286
+          ],
+          "polygon": [
+            [
+              365,
+              455
+            ],
+            [
+              365,
+              495
+            ],
+            [
+              366,
+              551
+            ],
+            [
+              367,
+              595
+            ],
+            [
+              370,
+              709
+            ],
+            [
+              371,
+              733
+            ],
+            [
+              372,
+              741
+            ],
+            [
+              801,
+              738
+            ],
+            [
+              1207,
+              734
+            ],
+            [
+              1208,
+              730
+            ],
+            [
+              1209,
+              640
+            ],
+            [
+              1209,
+              480
+            ],
+            [
+              1208,
+              456
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009249_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009249.jpg",
+        "full_path": "temp_batch_upload/06102009249.jpg",
+        "file_size_mb": 0.17171955108642578,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.670294,
+        "time_per_megapixel": 0.3491114583333333,
+        "time_per_mb": 3.90342273642821,
+        "pixels_per_second": 2864414.71951114
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009250.jpg",
+      "processing_time": 0.67171,
+      "barcode_regions": [
+        [
+          359,
+          562,
+          877,
+          186,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            359,
+            562,
+            877,
+            186
+          ],
+          "polygon": [
+            [
+              359,
+              653
+            ],
+            [
+              359,
+              655
+            ],
+            [
+              1190,
+              748
+            ],
+            [
+              1194,
+              734
+            ],
+            [
+              1236,
+              566
+            ],
+            [
+              1236,
+              562
+            ],
+            [
+              379,
+              563
+            ],
+            [
+              378,
+              565
+            ],
+            [
+              376,
+              573
+            ],
+            [
+              363,
+              633
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009250_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009250.jpg",
+        "full_path": "temp_batch_upload/06102009250.jpg",
+        "file_size_mb": 0.19576263427734375,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.687434,
+        "time_per_megapixel": 0.35803854166666665,
+        "time_per_mb": 3.5115690107954323,
+        "pixels_per_second": 2792995.4002857003
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009251.jpg",
+      "processing_time": 0.688777,
+      "barcode_regions": [
+        [
+          420,
+          446,
+          733,
+          245,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            420,
+            446,
+            733,
+            245
+          ],
+          "polygon": [
+            [
+              420,
+              453
+            ],
+            [
+              420,
+              469
+            ],
+            [
+              422,
+              569
+            ],
+            [
+              424,
+              657
+            ],
+            [
+              425,
+              687
+            ],
+            [
+              426,
+              691
+            ],
+            [
+              1153,
+              686
+            ],
+            [
+              1153,
+              684
+            ],
+            [
+              1150,
+              572
+            ],
+            [
+              1146,
+              452
+            ],
+            [
+              1145,
+              446
+            ],
+            [
+              794,
+              446
+            ],
+            [
+              421,
+              449
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009251_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009251.jpg",
+        "full_path": "temp_batch_upload/06102009251.jpg",
+        "file_size_mb": 0.18593406677246094,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.703724,
+        "time_per_megapixel": 0.3665229166666667,
+        "time_per_mb": 3.7848040018464757,
+        "pixels_per_second": 2728342.361493995
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009252.jpg",
+      "processing_time": 0.727887,
+      "barcode_regions": [
+        [
+          361,
+          485,
+          950,
+          199,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            361,
+            485,
+            950,
+            199
+          ],
+          "polygon": [
+            [
+              361,
+              487
+            ],
+            [
+              361,
+              489
+            ],
+            [
+              366,
+              515
+            ],
+            [
+              391,
+              635
+            ],
+            [
+              401,
+              679
+            ],
+            [
+              402,
+              681
+            ],
+            [
+              881,
+              684
+            ],
+            [
+              1311,
+              610
+            ],
+            [
+              1310,
+              602
+            ],
+            [
+              1309,
+              596
+            ],
+            [
+              1292,
+              514
+            ],
+            [
+              1287,
+              492
+            ],
+            [
+              1285,
+              486
+            ],
+            [
+              365,
+              485
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009252_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009252.jpg",
+        "full_path": "temp_batch_upload/06102009252.jpg",
+        "file_size_mb": 0.2164297103881836,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.743386,
+        "time_per_megapixel": 0.38718020833333333,
+        "time_per_mb": 3.4347687231419344,
+        "pixels_per_second": 2582776.6463183328
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009253.jpg",
+      "processing_time": 0.705939,
+      "barcode_regions": [
+        [
+          390,
+          509,
+          881,
+          164,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "7321925005431",
+          "type": "EAN13",
+          "bbox": [
+            390,
+            509,
+            881,
+            164
+          ],
+          "polygon": [
+            [
+              390,
+              665
+            ],
+            [
+              390,
+              667
+            ],
+            [
+              803,
+              673
+            ],
+            [
+              1249,
+              662
+            ],
+            [
+              1252,
+              646
+            ],
+            [
+              1256,
+              620
+            ],
+            [
+              1269,
+              532
+            ],
+            [
+              1271,
+              516
+            ],
+            [
+              1271,
+              510
+            ],
+            [
+              832,
+              509
+            ],
+            [
+              417,
+              509
+            ],
+            [
+              415,
+              515
+            ],
+            [
+              410,
+              539
+            ],
+            [
+              404,
+              573
+            ],
+            [
+              394,
+              635
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009253_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009253.jpg",
+        "full_path": "temp_batch_upload/06102009253.jpg",
+        "file_size_mb": 0.16499042510986328,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.720102,
+        "time_per_megapixel": 0.37505312500000004,
+        "time_per_mb": 4.364507816259646,
+        "pixels_per_second": 2666288.942399827
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    },
+    {
+      "image_path": "temp_batch_upload/06102009255.jpg",
+      "processing_time": 0.771916,
+      "barcode_regions": [
+        [
+          506,
+          385,
+          714,
+          266,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "data": "5055038601724",
+          "type": "EAN13",
+          "bbox": [
+            506,
+            385,
+            714,
+            266
+          ],
+          "polygon": [
+            [
+              506,
+              385
+            ],
+            [
+              506,
+              419
+            ],
+            [
+              507,
+              621
+            ],
+            [
+              508,
+              651
+            ],
+            [
+              874,
+              644
+            ],
+            [
+              1220,
+              606
+            ],
+            [
+              1220,
+              596
+            ],
+            [
+              1218,
+              432
+            ],
+            [
+              1217,
+              386
+            ]
+          ],
+          "image_variant": "color",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "visualization_path": "06102009255_detected.jpg",
+      "file_metadata": {
+        "filename": "06102009255.jpg",
+        "full_path": "temp_batch_upload/06102009255.jpg",
+        "file_size_mb": 0.2073974609375,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.78797,
+        "time_per_megapixel": 0.41040104166666663,
+        "time_per_mb": 3.799323272513243,
+        "pixels_per_second": 2436640.9888701346
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      }
+    }
+  ]
+}
