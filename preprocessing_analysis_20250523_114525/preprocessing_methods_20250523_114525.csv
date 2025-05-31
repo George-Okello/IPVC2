@@ -1,0 +1,2 @@
+method_name,method_type,images_attempted,images_successful,success_rate,total_codes_found,codes_per_attempt,processing_overhead,effectiveness_score
+standard_detection,detection_strategy,7,7,100.0,77,11.0,0.005,220.0

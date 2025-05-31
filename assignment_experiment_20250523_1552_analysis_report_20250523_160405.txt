@@ -1,0 +1,45 @@
+EXPERIMENTAL RESULTS ANALYSIS REPORT
+==================================================
+
+DATASET SUMMARY:
+Total Images Processed: 215
+Overall Detection Rate: 100.0%
+QR Code Detection Rate: 0.0%
+Barcode Detection Rate: 99.5%
+Average Processing Time: 1.632 seconds
+Fastest Processing: 0.484 seconds
+Slowest Processing: 47.384 seconds
+
+RESOLUTION IMPACT ANALYSIS:
+Resolution Range     Sample Size  Success Rate    Avg Time (s)
+-----------------------------------------------------------------
+800x600 - 1920x1080  112          100.0         % 1.021
+> 1920x1080          103          100.0         % 2.297
+
+CONTRAST IMPACT ANALYSIS:
+Contrast Level       Sample Size  Detection Rate  Avg Contrast
+-----------------------------------------------------------------
+Low (<0.4)           215          100.0         % 0.213
+
+QUALITY CORRELATIONS:
+Time Vs Megapixels: 0.190 (Very weak positive)
+Time Vs Quality Score: 0.011 (Very weak positive)
+Time Vs Contrast: -0.130 (Very weak negative)
+Time Vs Sharpness: -0.018 (Very weak negative)
+Time Vs Noise: 0.015 (Very weak positive)
+Time Vs Brightness: -0.067 (Very weak negative)
+Time Vs Strategies: 0.751 (Strong positive)
+
+STRATEGY EFFECTIVENESS:
+strategy_1: 97.2% of images, 100.0% success rate
+strategy_2: 2.3% of images, 100.0% success rate
+strategy_3: 0.5% of images, 100.0% success rate
+
+PREPROCESSING ANALYSIS SUMMARY:
+Images requiring preprocessing: 1
+Standard detection success: 209
+Rotation detection success: 5
+Top preprocessing methods:
+  - standard_detection: 100.0% success rate
+  - rotation_detection: 100.0% success rate
+  - gamma_correction: 100.0% success rate

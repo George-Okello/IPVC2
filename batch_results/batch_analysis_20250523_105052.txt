@@ -1,0 +1,49 @@
+BATCH BARCODE/QR CODE DETECTION REPORT
+==================================================
+
+Folder: temp_batch_upload
+Total images: 20
+Successfully processed: 20
+Failed: 0
+Total batch time: 14.97 seconds
+Average time per image: 0.748 seconds
+
+PERFORMANCE ANALYSIS
+-------------------------
+Fastest processing time: 0.552s
+Slowest processing time: 1.132s
+Average processing time: 0.718s
+Detection success rate: 100.0%
+
+TOP 5 FASTEST IMAGES (Low Complexity)
+----------------------------------------
+1. 06102009240.jpg
+   Time: 0.552s, Megapixels: 1.9, Codes: 1, Strategies: 1
+2. 05102009225.jpg
+   Time: 0.561s, Megapixels: 1.9, Codes: 1, Strategies: 1
+3. 05102009227.jpg
+   Time: 0.573s, Megapixels: 1.9, Codes: 1, Strategies: 1
+4. 05102009226.jpg
+   Time: 0.596s, Megapixels: 1.9, Codes: 1, Strategies: 1
+5. 06102009250.jpg
+   Time: 0.637s, Megapixels: 1.9, Codes: 1, Strategies: 1
+
+TOP 5 SLOWEST IMAGES (High Complexity)
+----------------------------------------
+1. 06102009248.jpg
+   Time: 0.728s, Megapixels: 1.9, Codes: 1, Strategies: 1
+2. 06102009251.jpg
+   Time: 0.861s, Megapixels: 1.9, Codes: 1, Strategies: 1
+3. 06102009253.jpg
+   Time: 0.920s, Megapixels: 1.9, Codes: 1, Strategies: 1
+4. 06102009255.jpg
+   Time: 1.058s, Megapixels: 1.9, Codes: 1, Strategies: 1
+5. 06102009252.jpg
+   Time: 1.132s, Megapixels: 1.9, Codes: 1, Strategies: 1
+
+COMPLEXITY CORRELATIONS
+-------------------------
+Time vs Megapixels: 0.000
+Time vs File Size: 0.487
+Time vs Codes Found: nan
+Time vs Strategies Used: nan

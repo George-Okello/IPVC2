@@ -1,0 +1,1120 @@
+{
+  "batch_info": {
+    "folder_path": "temp_uploaded",
+    "total_images": 5,
+    "processed_successfully": 5,
+    "failed": 0,
+    "total_processing_time": 29.039023,
+    "average_time_per_image": 5.8078046,
+    "timestamp": "2025-05-23T12:04:52.257511",
+    "total_codes_found": 5
+  },
+  "failed_images": [],
+  "performance_analysis": {
+    "timing_stats": {
+      "fastest_time": 2.077518,
+      "slowest_time": 4.968625,
+      "average_time": 2.6796936000000002,
+      "median_time": 2.115117,
+      "std_dev_time": 1.1447014514455025
+    },
+    "quality_stats": {
+      "average_quality_score": 41.38715149838527,
+      "quality_score_std": 2.582737630427507,
+      "average_contrast": 0.2256616262132,
+      "average_sharpness": 19.780156512095353,
+      "average_noise_level": 0.3897741920394822,
+      "average_brightness": 78.74734419561992
+    },
+    "complexity_ranking": {
+      "fastest_images": [
+        {
+          "filename": "PICT0003.JPG",
+          "processing_time": 2.077518,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 40.93621061217133,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0005.JPG",
+          "processing_time": 2.091265,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 39.90186566195325,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0002.JPG",
+          "processing_time": 2.115117,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 43.751337397808186,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0004.JPG",
+          "processing_time": 2.145943,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 37.619139190406095,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "uneven"
+        },
+        {
+          "filename": "PICT0008.JPG",
+          "processing_time": 4.968625,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 44.7272046295875,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        }
+      ],
+      "slowest_images": [
+        {
+          "filename": "PICT0003.JPG",
+          "processing_time": 2.077518,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 40.93621061217133,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0005.JPG",
+          "processing_time": 2.091265,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 39.90186566195325,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0002.JPG",
+          "processing_time": 2.115117,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 43.751337397808186,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "PICT0004.JPG",
+          "processing_time": 2.145943,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 37.619139190406095,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "uneven"
+        },
+        {
+          "filename": "PICT0008.JPG",
+          "processing_time": 4.968625,
+          "megapixels": 6.642432,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 44.7272046295875,
+          "contrast_category": "medium",
+          "sharpness_category": "blurred",
+          "lighting_category": "optimal"
+        }
+      ]
+    },
+    "correlations": {
+      "time_vs_megapixels": 1.5518079732991584e-16,
+      "time_vs_file_size": -0.23045279185666245,
+      "time_vs_codes_found": 0.0,
+      "time_vs_strategies": 0.0,
+      "time_vs_quality_score": 0.6404339171726445
+    },
+    "quality_impact_analysis": {
+      "resolution_impact": {
+        "high": {
+          "sample_size": 5,
+          "avg_processing_time": 2.6796936000000002,
+          "success_rate": 100.0,
+          "avg_megapixels": 6.642432000000001
+        }
+      },
+      "contrast_impact": {},
+      "sharpness_impact": {},
+      "lighting_impact": {},
+      "noise_impact": {},
+      "overall_quality_impact": {}
+    },
+    "efficiency_metrics": {
+      "average_pixels_per_second": 2789248.4502137667,
+      "average_time_per_megapixel": 0.4034205543993526,
+      "images_with_codes_found": 5,
+      "detection_success_rate": 100.0
+    }
+  },
+  "detailed_results": [
+    {
+      "image_path": "temp_uploaded/PICT0002.JPG",
+      "processing_time": 2.115117,
+      "barcode_regions": [
+        [
+          602,
+          608,
+          1608,
+          547,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4005404003028",
+          "bbox": [
+            602,
+            608,
+            1608,
+            547
+          ],
+          "polygon": [
+            [
+              602,
+              619
+            ],
+            [
+              602,
+              1009
+            ],
+            [
+              603,
+              1079
+            ],
+            [
+              604,
+              1131
+            ],
+            [
+              605,
+              1155
+            ],
+            [
+              2192,
+              1140
+            ],
+            [
+              2193,
+              1128
+            ],
+            [
+              2202,
+              948
+            ],
+            [
+              2210,
+              612
+            ],
+            [
+              2208,
+              610
+            ],
+            [
+              1430,
+              608
+            ],
+            [
+              603,
+              609
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/PICT0002_detected.jpg",
+      "file_metadata": {
+        "filename": "PICT0002.JPG",
+        "full_path": "temp_uploaded/PICT0002.JPG",
+        "file_size_mb": 1.5700349807739258,
+        "dimensions": {
+          "width": 2976,
+          "height": 2232
+        },
+        "pixels": 6642432,
+        "megapixels": 6.642432,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.115117,
+        "time_per_megapixel": 0.3184250888831079,
+        "time_per_mb": 1.347178264115736,
+        "pixels_per_second": 3140456.0598775386
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "PICT0002.JPG",
+        "resolution": {
+          "width": 2976,
+          "height": 2232,
+          "megapixels": 6.642432,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 6642432,
+          "category": "high"
+        },
+        "file_size_mb": 1.5700349807739258,
+        "contrast_metrics": {
+          "rms_contrast": 58.47786396750215,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 2.2666852830639854,
+          "std_contrast": 0.22932495673530257,
+          "avg_local_contrast": 0.04088273806719989,
+          "normalized_contrast": 0.22932495673530257,
+          "contrast_category": "medium",
+          "dynamic_range": "243"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 19.242864587202646,
+          "avg_gradient_magnitude": 23.73589654274636,
+          "tenengrad": 14477506878.0,
+          "brenner": "88380206",
+          "normalized_variance": 45.971007080847635,
+          "sharpness_category": "blurred"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.39896618034799963,
+          "signal_to_noise_ratio": 28.693812629098588,
+          "local_noise_estimate": "1.6263309",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 74.38733117629205,
+          "brightness_std": 58.47786396750215,
+          "lighting_uniformity": 0.7861266568216336,
+          "underexposed_ratio": 0.00016665582726326742,
+          "overexposed_ratio": 0.0,
+          "dynamic_range_utilization": 0.9529411764705882,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "7.4649863",
+          "line_count": 871,
+          "corner_count": 100,
+          "distortion_category": "moderate"
+        },
+        "color_metrics": {
+          "avg_saturation": 128.82869798290747,
+          "avg_color_variance": 3643.135918901942,
+          "grayscale_similarity": 0.9251247326005312,
+          "pil_brightness": 78.76308556865919,
+          "pil_contrast": 59.979054928572786
+        },
+        "structural_metrics": {
+          "texture_variance": 4.0947554224681335,
+          "edge_density": 0.011430301431764751,
+          "entropy": 6.73977749751174,
+          "complexity_score": 0.2574366193920702
+        },
+        "overall_quality_score": 43.751337397808186
+      }
+    },
+    {
+      "image_path": "temp_uploaded/PICT0003.JPG",
+      "processing_time": 2.077518,
+      "barcode_regions": [
+        [
+          842,
+          783,
+          1348,
+          462,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4005404003028",
+          "bbox": [
+            842,
+            783,
+            1348,
+            462
+          ],
+          "polygon": [
+            [
+              842,
+              831
+            ],
+            [
+              843,
+              893
+            ],
+            [
+              845,
+              1013
+            ],
+            [
+              850,
+              1245
+            ],
+            [
+              2189,
+              1244
+            ],
+            [
+              2190,
+              1240
+            ],
+            [
+              2190,
+              1108
+            ],
+            [
+              2189,
+              904
+            ],
+            [
+              2188,
+              786
+            ],
+            [
+              1533,
+              784
+            ],
+            [
+              847,
+              783
+            ],
+            [
+              846,
+              787
+            ],
+            [
+              844,
+              803
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/PICT0003_detected.jpg",
+      "file_metadata": {
+        "filename": "PICT0003.JPG",
+        "full_path": "temp_uploaded/PICT0003.JPG",
+        "file_size_mb": 1.5693740844726562,
+        "dimensions": {
+          "width": 2976,
+          "height": 2232
+        },
+        "pixels": 6642432,
+        "megapixels": 6.642432,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.077518,
+        "time_per_megapixel": 0.3127646620996647,
+        "time_per_mb": 1.323787630084443,
+        "pixels_per_second": 3197292.1534253857
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "PICT0003.JPG",
+        "resolution": {
+          "width": 2976,
+          "height": 2232,
+          "megapixels": 6.642432,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 6642432,
+          "category": "high"
+        },
+        "file_size_mb": 1.5693740844726562,
+        "contrast_metrics": {
+          "rms_contrast": 53.4656624716646,
+          "michelson_contrast": 0.9759036144578314,
+          "weber_contrast": 2.489464614523719,
+          "std_contrast": 0.20966926459476315,
+          "avg_local_contrast": 0.03853441740268911,
+          "normalized_contrast": 0.20966926459476315,
+          "contrast_category": "medium",
+          "dynamic_range": "243"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 22.034615628767586,
+          "avg_gradient_magnitude": 22.267559817992097,
+          "tenengrad": 14817739472.0,
+          "brenner": "88876623",
+          "normalized_variance": 40.54838768129564,
+          "sharpness_category": "blurred"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.39688173926751585,
+          "signal_to_noise_ratio": 28.66999824311374,
+          "local_noise_estimate": "1.7660248",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 70.49792079166185,
+          "brightness_std": 53.4656624716646,
+          "lighting_uniformity": 0.7584005580770016,
+          "underexposed_ratio": 6.0218907773538365e-05,
+          "overexposed_ratio": 1.505472694338459e-07,
+          "dynamic_range_utilization": 0.9529411764705882,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "11.036005",
+          "line_count": 1361,
+          "corner_count": 100,
+          "distortion_category": "moderate"
+        },
+        "color_metrics": {
+          "avg_saturation": 126.48732708140633,
+          "avg_color_variance": 2954.907257590021,
+          "grayscale_similarity": 0.9304527504748615,
+          "pil_brightness": 74.6917410169448,
+          "pil_contrast": 54.15032958986342
+        },
+        "structural_metrics": {
+          "texture_variance": 4.043447571190826,
+          "edge_density": 0.010655284088719312,
+          "entropy": 6.783739943242626,
+          "complexity_score": 0.25877366493422194
+        },
+        "overall_quality_score": 40.93621061217133
+      }
+    },
+    {
+      "image_path": "temp_uploaded/PICT0004.JPG",
+      "processing_time": 2.145943,
+      "barcode_regions": [
+        [
+          623,
+          869,
+          1572,
+          520,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4005404003028",
+          "bbox": [
+            623,
+            869,
+            1572,
+            520
+          ],
+          "polygon": [
+            [
+              623,
+              1381
+            ],
+            [
+              624,
+              1389
+            ],
+            [
+              2175,
+              1384
+            ],
+            [
+              2176,
+              1382
+            ],
+            [
+              2192,
+              1250
+            ],
+            [
+              2195,
+              1016
+            ],
+            [
+              2194,
+              874
+            ],
+            [
+              1389,
+              871
+            ],
+            [
+              638,
+              869
+            ],
+            [
+              637,
+              877
+            ],
+            [
+              627,
+              1219
+            ],
+            [
+              626,
+              1257
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/PICT0004_detected.jpg",
+      "file_metadata": {
+        "filename": "PICT0004.JPG",
+        "full_path": "temp_uploaded/PICT0004.JPG",
+        "file_size_mb": 1.5620079040527344,
+        "dimensions": {
+          "width": 2976,
+          "height": 2232
+        },
+        "pixels": 6642432,
+        "megapixels": 6.642432,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.145943,
+        "time_per_megapixel": 0.3230658590106756,
+        "time_per_mb": 1.3738361979041251,
+        "pixels_per_second": 3095344.098142402
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "PICT0004.JPG",
+        "resolution": {
+          "width": 2976,
+          "height": 2232,
+          "megapixels": 6.642432,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 6642432,
+          "category": "high"
+        },
+        "file_size_mb": 1.5620079040527344,
+        "contrast_metrics": {
+          "rms_contrast": 57.6440196510509,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 2.499100503674677,
+          "std_contrast": 0.226054979023729,
+          "avg_local_contrast": 0.0387544817240112,
+          "normalized_contrast": 0.226054979023729,
+          "contrast_category": "medium",
+          "dynamic_range": "244"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 15.332383343277034,
+          "avg_gradient_magnitude": 22.547209019737306,
+          "tenengrad": 10922674982.0,
+          "brenner": "99760167",
+          "normalized_variance": 47.651337961255074,
+          "sharpness_category": "blurred"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.39791073126055615,
+          "signal_to_noise_ratio": 28.69406300898913,
+          "local_noise_estimate": "1.3896593",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 69.73220681822562,
+          "brightness_std": 57.6440196510509,
+          "lighting_uniformity": 0.8266484352246933,
+          "underexposed_ratio": 8.084388368597526e-05,
+          "overexposed_ratio": 0.0,
+          "dynamic_range_utilization": 0.9568627450980393,
+          "lighting_category": "uneven"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "17.912039",
+          "line_count": 5491,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 135.8977129159922,
+          "avg_color_variance": 3532.5110574198975,
+          "grayscale_similarity": 0.9254001292184738,
+          "pil_brightness": 74.30800014211663,
+          "pil_contrast": 59.065938299138786
+        },
+        "structural_metrics": {
+          "texture_variance": 4.058999304509333,
+          "edge_density": 0.012664638493852853,
+          "entropy": 6.692161396827213,
+          "complexity_score": 0.2561436777576969
+        },
+        "overall_quality_score": 37.619139190406095
+      }
+    },
+    {
+      "image_path": "temp_uploaded/PICT0005.JPG",
+      "processing_time": 2.091265,
+      "barcode_regions": [
+        [
+          599,
+          833,
+          1596,
+          340,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4005404003028",
+          "bbox": [
+            599,
+            833,
+            1596,
+            340
+          ],
+          "polygon": [
+            [
+              599,
+              1033
+            ],
+            [
+              599,
+              1035
+            ],
+            [
+              1321,
+              1173
+            ],
+            [
+              2124,
+              1172
+            ],
+            [
+              2156,
+              1056
+            ],
+            [
+              2175,
+              960
+            ],
+            [
+              2195,
+              846
+            ],
+            [
+              2195,
+              844
+            ],
+            [
+              2194,
+              840
+            ],
+            [
+              1389,
+              833
+            ],
+            [
+              638,
+              833
+            ],
+            [
+              634,
+              849
+            ],
+            [
+              629,
+              875
+            ],
+            [
+              602,
+              1017
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/PICT0005_detected.jpg",
+      "file_metadata": {
+        "filename": "PICT0005.JPG",
+        "full_path": "temp_uploaded/PICT0005.JPG",
+        "file_size_mb": 1.6179418563842773,
+        "dimensions": {
+          "width": 2976,
+          "height": 2232
+        },
+        "pixels": 6642432,
+        "megapixels": 6.642432,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.091265,
+        "time_per_megapixel": 0.3148342354125718,
+        "time_per_mb": 1.292546448284297,
+        "pixels_per_second": 3176274.64716332
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "PICT0005.JPG",
+        "resolution": {
+          "width": 2976,
+          "height": 2232,
+          "megapixels": 6.642432,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 6642432,
+          "category": "high"
+        },
+        "file_size_mb": 1.6179418563842773,
+        "contrast_metrics": {
+          "rms_contrast": 60.558177615912,
+          "michelson_contrast": 60.5,
+          "weber_contrast": 2.2861205856325197,
+          "std_contrast": 0.2374830494741647,
+          "avg_local_contrast": 0.04326761206600592,
+          "normalized_contrast": 0.2374830494741647,
+          "contrast_category": "medium",
+          "dynamic_range": "242"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 31.17733760012575,
+          "avg_gradient_magnitude": 24.16281497229879,
+          "tenengrad": 21186068334.0,
+          "brenner": "105185797",
+          "normalized_variance": 48.012615363022945,
+          "sharpness_category": "blurred"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.41192788885463794,
+          "signal_to_noise_ratio": 28.370010314390978,
+          "local_noise_estimate": "2.147407",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 76.38185923468994,
+          "brightness_std": 60.558177615912,
+          "lighting_uniformity": 0.7928345581356131,
+          "underexposed_ratio": 1.505472694338459e-07,
+          "overexposed_ratio": 1.3398706979612286e-05,
+          "dynamic_range_utilization": 0.9490196078431372,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "16.768368",
+          "line_count": 626,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 124.60437878776929,
+          "avg_color_variance": 3704.4157299178637,
+          "grayscale_similarity": 0.9302475304410204,
+          "pil_brightness": 80.31879955012461,
+          "pil_contrast": 60.67181751668351
+        },
+        "structural_metrics": {
+          "texture_variance": 4.1669022882808235,
+          "edge_density": 0.010579709359463521,
+          "entropy": 6.772717195897263,
+          "complexity_score": 0.25833378565858117
+        },
+        "overall_quality_score": 39.90186566195325
+      }
+    },
+    {
+      "image_path": "temp_uploaded/PICT0008.JPG",
+      "processing_time": 4.968625,
+      "barcode_regions": [
+        [
+          308,
+          167,
+          1420,
+          471,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4005404003028",
+          "bbox": [
+            308,
+            167,
+            1420,
+            471
+          ],
+          "polygon": [
+            [
+              308,
+              583
+            ],
+            [
+              310,
+              619
+            ],
+            [
+              987,
+              635
+            ],
+            [
+              1717,
+              638
+            ],
+            [
+              1718,
+              630
+            ],
+            [
+              1721,
+              538
+            ],
+            [
+              1728,
+              172
+            ],
+            [
+              993,
+              167
+            ],
+            [
+              315,
+              167
+            ],
+            [
+              314,
+              169
+            ],
+            [
+              310,
+              293
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 7,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/PICT0008_detected.jpg",
+      "file_metadata": {
+        "filename": "PICT0008.JPG",
+        "full_path": "temp_uploaded/PICT0008.JPG",
+        "file_size_mb": 1.5685596466064453,
+        "dimensions": {
+          "width": 2976,
+          "height": 2232
+        },
+        "pixels": 6642432,
+        "megapixels": 6.642432,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 4.968625,
+        "time_per_megapixel": 0.7480129265907427,
+        "time_per_mb": 3.16763535945193,
+        "pixels_per_second": 1336875.2924601876
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "PICT0008.JPG",
+        "resolution": {
+          "width": 2976,
+          "height": 2232,
+          "megapixels": 6.642432,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 6642432,
+          "category": "high"
+        },
+        "file_size_mb": 1.5685596466064453,
+        "contrast_metrics": {
+          "rms_contrast": 57.57284971570032,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.4820561223078341,
+          "std_contrast": 0.2257758812380405,
+          "avg_local_contrast": 0.036936126021613655,
+          "normalized_contrast": 0.2257758812380405,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 11.11358140110376,
+          "avg_gradient_magnitude": 20.346141083740434,
+          "tenengrad": 9214155078.0,
+          "brenner": "75975333",
+          "normalized_variance": 32.26315729922966,
+          "sharpness_category": "blurred"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.34318442046670167,
+          "signal_to_noise_ratio": 29.639438569217038,
+          "local_noise_estimate": "1.1868176",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 102.73740295723012,
+          "brightness_std": 57.57284971570032,
+          "lighting_uniformity": 0.5603884082963249,
+          "underexposed_ratio": 7.060666936447373e-05,
+          "overexposed_ratio": 0.07747011937796278,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "13.935037",
+          "line_count": 2232,
+          "corner_count": 100,
+          "distortion_category": "moderate"
+        },
+        "color_metrics": {
+          "avg_saturation": 83.14075070696998,
+          "avg_color_variance": 3421.7824299946474,
+          "grayscale_similarity": 0.9444571683912054,
+          "pil_brightness": 106.37638608870968,
+          "pil_contrast": 58.4797709839591
+        },
+        "structural_metrics": {
+          "texture_variance": 3.8148092459053817,
+          "edge_density": 0.011775205226037692,
+          "entropy": 6.912049173072216,
+          "complexity_score": 0.2640263703580003
+        },
+        "overall_quality_score": 44.7272046295875
+      }
+    }
+  ],
+  "error_log": []
+}

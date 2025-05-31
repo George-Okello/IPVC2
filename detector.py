@@ -1,21 +1,22 @@
-# enhanced_detector.py
+# detector.py
 """
-Enhanced detection system that handles rotated, inverted, and challenging barcodes
-with comprehensive rotation angle support
+Comprehensive barcode and QR code detection system with preprocessing analytics
 """
 import cv2
-import os
-from datetime import datetime
 import numpy as np
 from pyzbar import pyzbar
-from PIL import Image
+from PIL import Image, ImageEnhance
+import os
+from datetime import datetime
 
 
 class Detector:
-    """Enhanced barcode and QR code detector with comprehensive rotation support"""
+    """Advanced barcode and QR code detector with comprehensive preprocessing tracking"""
 
-    def __init__(self):
+    def __init__(self, output_dir="results"):
+        self.output_dir = output_dir
         self.last_result = None
+        os.makedirs(output_dir, exist_ok=True)
 
     def detect_codes(self, image_path):
         """Detect and decode codes in an image with comprehensive rotation handling"""
@@ -25,6 +26,15 @@ class Detector:
             raise ValueError(f"Cannot load image: {image_path}")
 
         start_time = datetime.now()
+
+        # Initialize preprocessing tracking
+        preprocessing_analytics = {
+            'methods_attempted': [],
+            'methods_successful': [],
+            'method_success_details': {},
+            'total_methods_tried': 0,
+            'successful_methods_count': 0
+        }
 
         # Detect using multiple strategies
         all_codes = []
@@ -36,11 +46,28 @@ class Detector:
         basic_codes = self._detect_standard(image)
         all_codes.extend(basic_codes)
 
+        # Track if standard detection was successful
+        if len(basic_codes) > 0:
+            preprocessing_analytics['methods_attempted'].append('standard_detection')
+            preprocessing_analytics['methods_successful'].append('standard_detection')
+            preprocessing_analytics['method_success_details']['standard_detection'] = {
+                'codes_found': len(basic_codes),
+                'method_type': 'basic'
+            }
+
         # Strategy 2: Try with comprehensive rotations if needed
         if len(basic_codes) == 0:
             rotated_codes, rot_regions = self._detect_with_comprehensive_rotations(image)
             all_codes.extend(rotated_codes)
             other_regions.extend(rot_regions)
+
+            if len(rotated_codes) > 0:
+                preprocessing_analytics['methods_attempted'].append('rotation_detection')
+                preprocessing_analytics['methods_successful'].append('rotation_detection')
+                preprocessing_analytics['method_success_details']['rotation_detection'] = {
+                    'codes_found': len(rotated_codes),
+                    'method_type': 'rotation'
+                }
 
         # Strategy 3: Try with enhanced preprocessing + rotations if still needed
         if len(all_codes) == 0:
@@ -48,11 +75,42 @@ class Detector:
             all_codes.extend(enhanced_codes)
             other_regions.extend(enh_regions)
 
+            # Extract preprocessing success information from codes
+            for code in enhanced_codes:
+                if 'preprocessing_success_tracking' in code:
+                    tracking = code['preprocessing_success_tracking']
+                    for method_name, details in tracking.items():
+                        if method_name not in preprocessing_analytics['methods_attempted']:
+                            preprocessing_analytics['methods_attempted'].append(method_name)
+                        if details['successful'] and method_name not in preprocessing_analytics['methods_successful']:
+                            preprocessing_analytics['methods_successful'].append(method_name)
+                            preprocessing_analytics['method_success_details'][method_name] = details
+
         # Strategy 4: Try fine-grained rotation if still no results
         if len(all_codes) == 0:
             fine_codes, fine_regions = self._detect_with_fine_rotations(image)
             all_codes.extend(fine_codes)
             other_regions.extend(fine_regions)
+
+            # Extract preprocessing success information from fine rotation codes
+            for code in fine_codes:
+                if 'preprocessing_success_tracking' in code:
+                    tracking = code['preprocessing_success_tracking']
+                    for method_name, details in tracking.items():
+                        if method_name not in preprocessing_analytics['methods_attempted']:
+                            preprocessing_analytics['methods_attempted'].append(method_name)
+                        if details['successful'] and method_name not in preprocessing_analytics['methods_successful']:
+                            preprocessing_analytics['methods_successful'].append(method_name)
+                            preprocessing_analytics['method_success_details'][method_name] = details
+
+        # Finalize preprocessing analytics
+        preprocessing_analytics['total_methods_tried'] = len(preprocessing_analytics['methods_attempted'])
+        preprocessing_analytics['successful_methods_count'] = len(preprocessing_analytics['methods_successful'])
+        preprocessing_analytics['success_rate'] = (
+                                                      preprocessing_analytics['successful_methods_count'] /
+                                                      preprocessing_analytics['total_methods_tried']
+                                                      if preprocessing_analytics['total_methods_tried'] > 0 else 0
+                                                  ) * 100
 
         # Remove duplicates
         unique_codes = self._remove_duplicates(all_codes)
@@ -82,7 +140,8 @@ class Detector:
             'qr_regions': qr_regions,
             'regions': other_regions,
             'detected_codes': unique_codes,
-            'total_codes': len(unique_codes)
+            'total_codes': len(unique_codes),
+            'preprocessing_analytics': preprocessing_analytics
         }
 
         # Save visualization
@@ -93,15 +152,51 @@ class Detector:
         return result
 
     def _detect_standard(self, image):
-        """Standard detection with pyzbar"""
-        return self._decode_image_pyzbar(image)
+        """Standard detection with basic preprocessing"""
+        codes = []
+
+        # Try multiple image variants
+        variants = [
+            ('original_color', lambda img: cv2.cvtColor(img, cv2.COLOR_BGR2RGB)),
+            ('grayscale', lambda img: cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)),
+            ('otsu_binary', self._otsu_threshold),
+            ('inverted_otsu', lambda img: cv2.bitwise_not(self._otsu_threshold(img))),
+            ('adaptive_gaussian', lambda img: cv2.adaptiveThreshold(
+                cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img,
+                255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)),
+            ('adaptive_mean', lambda img: cv2.adaptiveThreshold(
+                cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img,
+                255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 15, 5))
+        ]
+
+        # Add fixed threshold variants
+        for threshold in range(80, 181, 20):
+            variants.append((f'threshold_{threshold}',
+                             lambda img, t=threshold: cv2.threshold(
+                                 cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img,
+                                 t, 255, cv2.THRESH_BINARY)[1]))
+
+        for variant_name, transform_func in variants:
+            try:
+                transformed = transform_func(image)
+                if transformed is not None:
+                    new_codes = self._decode_image_pyzbar(transformed)
+                    for code in new_codes:
+                        code['image_variant'] = variant_name
+                        code['detection_method'] = 'standard'
+                    codes.extend(new_codes)
+            except Exception as e:
+                print(f"Error in variant {variant_name}: {e}")
+                continue
+
+        return codes
 
     def _detect_with_comprehensive_rotations(self, image):
-        """Try detection with comprehensive rotation angles"""
+        """Try detection with multiple rotation angles"""
         codes = []
         regions = []
 
-        # Try multiple rotation angles including common orientations
+        # Standard rotation angles
         rotation_angles = [0, 45, 90, 135, 180, 225, 270, 315]
 
         for angle in rotation_angles:
@@ -114,57 +209,35 @@ class Detector:
             h, w = rotated.shape[:2]
             regions.append((0, 0, w, h, f"rotation_{angle}"))
 
-            # Try detection
-            angle_codes = self._decode_image_pyzbar(rotated)
-
-            # Add rotation info to codes
-            for code in angle_codes:
-                code['rotation'] = angle
-
-            codes.extend(angle_codes)
-
-            # Continue checking all angles to find the best detection
-            # Don't break early to ensure we get all possible detections
-
-        return codes, regions
-
-    def _detect_with_fine_rotations(self, image):
-        """Try detection with fine-grained rotation angles (every 5 degrees)"""
-        codes = []
-        regions = []
-
-        # Try every 5 degrees for very comprehensive coverage
-        rotation_angles = range(0, 360, 5)
-
-        for angle in rotation_angles:
-            if angle == 0:
-                rotated = image.copy()
-            else:
-                rotated = self._rotate_image(image, angle)
-
-            # Track region
-            h, w = rotated.shape[:2]
-            regions.append((0, 0, w, h, f"fine_rotation_{angle}"))
-
             # Try detection with multiple preprocessing on rotated image
             angle_codes = self._decode_image_pyzbar(rotated)
 
-            # Also try with enhanced preprocessing on this specific rotation
+            # Also try with some basic preprocessing
             if len(angle_codes) == 0:
-                # Try barcode-specific enhancement
-                enhanced = self._enhance_for_barcode(rotated)
-                enhanced_codes = self._decode_image_pyzbar(enhanced)
-                for code in enhanced_codes:
+                # Try grayscale
+                gray = cv2.cvtColor(rotated, cv2.COLOR_BGR2GRAY)
+                gray_codes = self._decode_image_pyzbar(gray)
+                for code in gray_codes:
                     code['rotation'] = angle
-                    code['detection_method'] = 'fine_rotation_enhanced'
-                angle_codes.extend(enhanced_codes)
+                    code['detection_method'] = 'rotation_grayscale'
+                angle_codes.extend(gray_codes)
+
+                # Try adaptive threshold
+                if len(gray_codes) == 0:
+                    adaptive = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11,
+                                                     2)
+                    adaptive_codes = self._decode_image_pyzbar(adaptive)
+                    for code in adaptive_codes:
+                        code['rotation'] = angle
+                        code['detection_method'] = 'rotation_adaptive'
+                    angle_codes.extend(adaptive_codes)
 
             # Add rotation info to codes
             for code in angle_codes:
                 if 'rotation' not in code:
                     code['rotation'] = angle
                 if 'detection_method' not in code:
-                    code['detection_method'] = 'fine_rotation'
+                    code['detection_method'] = 'rotation'
 
             codes.extend(angle_codes)
 
@@ -174,6 +247,7 @@ class Detector:
         """Try with enhanced preprocessing methods combined with rotations"""
         codes = []
         regions = []
+        preprocessing_success_tracking = {}
 
         # List of preprocessing methods to try
         preprocess_methods = [
@@ -196,6 +270,7 @@ class Detector:
 
         # Try each preprocessing method
         for name, method in preprocess_methods:
+            method_codes = []
             try:
                 processed = method(image)
                 if processed is not None:
@@ -215,453 +290,437 @@ class Detector:
                         for code in new_codes:
                             code['preprocess'] = name
                             code['rotation'] = angle
+                            code['preprocessing_method'] = name
+                            code['preprocessing_successful'] = True
 
-                        codes.extend(new_codes)
+                        method_codes.extend(new_codes)
+
+                # Track success for this preprocessing method
+                preprocessing_success_tracking[name] = {
+                    'attempted': True,
+                    'successful': len(method_codes) > 0,
+                    'codes_found': len(method_codes),
+                    'method_type': self._categorize_preprocessing_method(name)
+                }
+
+                codes.extend(method_codes)
 
             except Exception as e:
                 print(f"Error in preprocessing method {name}: {e}")
+                preprocessing_success_tracking[name] = {
+                    'attempted': True,
+                    'successful': False,
+                    'codes_found': 0,
+                    'error': str(e),
+                    'method_type': self._categorize_preprocessing_method(name)
+                }
+
+        # Add preprocessing success tracking to codes metadata
+        for code in codes:
+            if 'preprocessing_success_tracking' not in code:
+                code['preprocessing_success_tracking'] = preprocessing_success_tracking
+
+        return codes, regions
+
+    def _categorize_preprocessing_method(self, method_name):
+        """Categorize preprocessing methods by type"""
+        categories = {
+            'basic': ['original', 'grayscale', 'blur'],
+            'enhancement': ['sharpen', 'contrast_enhance', 'gamma_correction'],
+            'noise_reduction': ['noise_reduction', 'blur'],
+            'thresholding': ['adaptive_threshold'],
+            'morphological': ['morphology', 'edge_enhance'],
+            'advanced': ['perspective_correction', 'barcode_enhancement']
+        }
+
+        for category, methods in categories.items():
+            if method_name in methods:
+                return category
+        return 'other'
+
+    def _detect_with_fine_rotations(self, image):
+        """Try detection with fine-grained rotation angles (every 5 degrees)"""
+        codes = []
+        regions = []
+        preprocessing_success_tracking = {}
+
+        # Try every 5 degrees for very comprehensive coverage
+        rotation_angles = range(0, 360, 5)
+
+        for angle in rotation_angles:
+            if angle == 0:
+                rotated = image.copy()
+            else:
+                rotated = self._rotate_image(image, angle)
+
+            # Track region
+            h, w = rotated.shape[:2]
+            regions.append((0, 0, w, h, f"fine_rotation_{angle}"))
+
+            # Try detection with multiple preprocessing on rotated image
+            angle_codes = self._decode_image_pyzbar(rotated)
+
+            # Also try with enhanced preprocessing on this specific rotation
+            if len(angle_codes) == 0:
+                # Try barcode-specific enhancement
+                enhanced = self._enhance_for_barcode(rotated)
+                enhanced_codes = self._decode_image_pyzbar(enhanced)
+
+                # Track if barcode enhancement was successful
+                if len(enhanced_codes) > 0:
+                    preprocessing_success_tracking['barcode_enhancement'] = {
+                        'attempted': True,
+                        'successful': True,
+                        'codes_found': len(enhanced_codes),
+                        'method_type': 'advanced',
+                        'rotation_angle': angle
+                    }
+
+                for code in enhanced_codes:
+                    code['rotation'] = angle
+                    code['detection_method'] = 'fine_rotation_enhanced'
+                    code['preprocessing_method'] = 'barcode_enhancement'
+                    code['preprocessing_successful'] = True
+                    code['preprocessing_success_tracking'] = preprocessing_success_tracking
+
+                angle_codes.extend(enhanced_codes)
+
+            # Add rotation info to codes
+            for code in angle_codes:
+                if 'rotation' not in code:
+                    code['rotation'] = angle
+                if 'detection_method' not in code:
+                    code['detection_method'] = 'fine_rotation'
+
+            codes.extend(angle_codes)
 
         return codes, regions
 
     def _decode_image_pyzbar(self, image):
-        """Decode using pyzbar with proper image conversion and multiple attempts"""
-        results = []
+        """Decode barcodes and QR codes using pyzbar"""
+        codes = []
 
-        # Try with different image formats
-        image_variants = []
-
-        # Original image
-        if len(image.shape) == 3:
-            # BGR to RGB for PIL
-            image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            image_variants.append(('color', Image.fromarray(image_rgb)))
-
-            # Convert to grayscale
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-            image_variants.append(('grayscale', Image.fromarray(gray)))
-        else:
-            # Already grayscale
-            image_variants.append(('grayscale', Image.fromarray(image)))
-
-        # Try binary threshold versions
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
-
-        # Different threshold methods
         try:
-            _, thresh1 = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
-            image_variants.append(('binary_fixed', Image.fromarray(thresh1)))
+            # Convert to PIL Image for pyzbar
+            if isinstance(image, np.ndarray):
+                if len(image.shape) == 3:
+                    # BGR to RGB conversion for color images
+                    pil_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+                else:
+                    # Grayscale image
+                    pil_image = Image.fromarray(image)
+            else:
+                pil_image = image
 
-            _, thresh2 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-            image_variants.append(('binary_otsu', Image.fromarray(thresh2)))
+            # Decode using pyzbar
+            decoded_objects = pyzbar.decode(pil_image)
 
-            # Try inverted binary
-            _, thresh_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-            image_variants.append(('binary_inv_otsu', Image.fromarray(thresh_inv)))
+            for obj in decoded_objects:
+                # Extract bounding box
+                x, y, w, h = obj.rect.left, obj.rect.top, obj.rect.width, obj.rect.height
 
-            thresh3 = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-            image_variants.append(('adaptive', Image.fromarray(thresh3)))
-
-            # Try adaptive with different parameters
-            thresh4 = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 15, 5)
-            image_variants.append(('adaptive_mean', Image.fromarray(thresh4)))
-
-            # Multiple threshold values for fixed thresholding
-            for thresh_val in [80, 100, 120, 140, 160, 180]:
-                _, thresh_multi = cv2.threshold(gray, thresh_val, 255, cv2.THRESH_BINARY)
-                image_variants.append((f'binary_{thresh_val}', Image.fromarray(thresh_multi)))
+                code_info = {
+                    'type': obj.type,
+                    'data': obj.data.decode('utf-8'),
+                    'bbox': (x, y, w, h),
+                    'polygon': [(point.x, point.y) for point in obj.polygon]
+                }
+                codes.append(code_info)
 
         except Exception as e:
-            print(f"Error creating threshold variants: {e}")
+            print(f"Error in pyzbar decoding: {e}")
 
-        # Try decoding each variant
-        for variant_name, pil_image in image_variants:
-            try:
-                codes = pyzbar.decode(pil_image)
-                for code in codes:
-                    try:
-                        result = {
-                            'data': code.data.decode('utf-8', errors='replace'),
-                            'type': code.type,
-                            'bbox': code.rect,
-                            'polygon': [(p.x, p.y) for p in code.polygon] if code.polygon else [],
-                            'image_variant': variant_name
-                        }
-                        results.append(result)
-                    except Exception as e:
-                        print(f"Error processing decoded code: {e}")
-            except Exception as e:
-                print(f"Error in pyzbar decode for {variant_name}: {e}")
-
-        return results
-
-    def _remove_duplicates(self, all_codes):
-        """Remove duplicate codes based on data and type"""
-        unique_results = {}
-        for result in all_codes:
-            key = (result['data'], result['type'])
-            if key not in unique_results:
-                unique_results[key] = result
-            else:
-                # Keep the one with more detailed information
-                existing = unique_results[key]
-                if 'rotation' in result and 'rotation' not in existing:
-                    unique_results[key] = result
-
-        return list(unique_results.values())
+        return codes
 
     def _rotate_image(self, image, angle):
-        """Rotate an image by given angle with improved handling"""
+        """Rotate image by specified angle"""
         if angle == 0:
             return image.copy()
 
         height, width = image.shape[:2]
         center = (width // 2, height // 2)
 
-        # Get rotation matrix
+        # Calculate rotation matrix
         rotation_matrix = cv2.getRotationMatrix2D(center, angle, 1.0)
 
-        # Calculate new bounding dimensions
-        cos_val = np.abs(rotation_matrix[0, 0])
-        sin_val = np.abs(rotation_matrix[0, 1])
-
+        # Calculate new dimensions to fit the entire rotated image
+        cos_val = abs(rotation_matrix[0, 0])
+        sin_val = abs(rotation_matrix[0, 1])
         new_width = int((height * sin_val) + (width * cos_val))
         new_height = int((height * cos_val) + (width * sin_val))
 
-        # Adjust the rotation matrix to take into account translation
-        rotation_matrix[0, 2] += (new_width / 2) - center[0]
-        rotation_matrix[1, 2] += (new_height / 2) - center[1]
+        # Adjust rotation matrix for new center
+        rotation_matrix[0, 2] += (new_width // 2) - center[0]
+        rotation_matrix[1, 2] += (new_height // 2) - center[1]
 
-        # Perform the actual rotation and return the image
+        # Perform rotation with white background
         rotated = cv2.warpAffine(image, rotation_matrix, (new_width, new_height),
-                                 flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT,
-                                 borderValue=(255, 255, 255))
+                                 borderMode=cv2.BORDER_CONSTANT, borderValue=(255, 255, 255))
+
         return rotated
 
-    def _sharpen_image(self, image):
-        """Apply sharpening filter"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+    def _remove_duplicates(self, codes):
+        """Remove duplicate codes based on data and type"""
+        unique_codes = {}
 
-        kernel = np.array([[-1, -1, -1],
-                           [-1, 9, -1],
-                           [-1, -1, -1]])
-        sharpened = cv2.filter2D(gray, -1, kernel)
-        return sharpened
+        for code in codes:
+            key = (code['data'], code['type'])
+            if key not in unique_codes:
+                unique_codes[key] = code
+            else:
+                # Keep the code with more information
+                existing = unique_codes[key]
+                if self._code_has_more_info(code, existing):
+                    unique_codes[key] = code
+
+        return list(unique_codes.values())
+
+    def _code_has_more_info(self, code1, code2):
+        """Check if code1 has more information than code2"""
+        score1 = len([k for k in code1.keys() if code1[k] is not None])
+        score2 = len([k for k in code2.keys() if code2[k] is not None])
+        return score1 > score2
+
+    # Preprocessing helper methods
+    def _otsu_threshold(self, image):
+        """Apply Otsu's thresholding"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+        _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        return binary
 
     def _adaptive_threshold(self, image):
         """Apply adaptive thresholding"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
+        return cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+
+    def _sharpen_image(self, image):
+        """Sharpen the image using unsharp masking"""
         if len(image.shape) == 3:
             gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         else:
-            gray = image
+            gray = image.copy()
 
-        blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-        thresh = cv2.adaptiveThreshold(blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-                                       cv2.THRESH_BINARY, 11, 2)
-        return thresh
+        # Create sharpening kernel
+        kernel = np.array([[-1, -1, -1],
+                           [-1, 9, -1],
+                           [-1, -1, -1]])
+
+        sharpened = cv2.filter2D(gray, -1, kernel)
+        return sharpened
 
     def _edge_enhance(self, image):
-        """Enhance edges for barcode detection"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Enhance edges using gradient filters"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Edge detection
-        edges = cv2.Canny(gray, 100, 200)
+        # Apply Sobel filters
+        grad_x = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
+        grad_y = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
 
-        # Dilate to connect edges
-        kernel = np.ones((3, 3), np.uint8)
-        dilated = cv2.dilate(edges, kernel, iterations=1)
+        # Combine gradients
+        magnitude = np.sqrt(grad_x ** 2 + grad_y ** 2)
+        magnitude = np.uint8(np.clip(magnitude, 0, 255))
 
-        return dilated
+        return magnitude
 
     def _morphological_operations(self, image):
-        """Apply morphological operations to clean up the image"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Apply morphological operations"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Apply morphological operations
+        # Create morphological kernel
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
 
-        # Opening (erosion followed by dilation)
-        opening = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel)
+        # Apply closing (dilation followed by erosion)
+        closed = cv2.morphologyEx(gray, cv2.MORPH_CLOSE, kernel)
 
-        # Closing (dilation followed by erosion)
-        closing = cv2.morphologyEx(opening, cv2.MORPH_CLOSE, kernel)
+        # Apply opening (erosion followed by dilation)
+        opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, kernel)
 
-        return closing
+        return opened
 
     def _enhance_contrast(self, image):
-        """Enhance contrast using CLAHE"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Enhance image contrast using CLAHE"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Create CLAHE object
+        # Apply CLAHE (Contrast Limited Adaptive Histogram Equalization)
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
         enhanced = clahe.apply(gray)
 
         return enhanced
 
     def _correct_perspective(self, image):
-        """Attempt to correct perspective distortion"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Attempt basic perspective correction"""
+        # This is a simplified perspective correction
+        # In practice, you might want more sophisticated methods
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Find contours to detect rectangular shapes
-        edges = cv2.Canny(gray, 50, 200)
+        # Find contours
+        edges = cv2.Canny(gray, 50, 150, apertureSize=3)
         contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        # Look for the largest rectangular contour (potential barcode area)
-        for contour in sorted(contours, key=cv2.contourArea, reverse=True)[:5]:
-            epsilon = 0.02 * cv2.arcLength(contour, True)
-            approx = cv2.approxPolyDP(contour, epsilon, True)
+        if contours:
+            # Find the largest contour
+            largest_contour = max(contours, key=cv2.contourArea)
 
-            if len(approx) == 4 and cv2.contourArea(contour) > 1000:
-                # Found a quadrilateral, try perspective correction
-                try:
-                    # Order points for perspective transform
-                    rect = self._order_points(approx.reshape(4, 2))
+            # Approximate contour to polygon
+            epsilon = 0.02 * cv2.arcLength(largest_contour, True)
+            approx = cv2.approxPolyDP(largest_contour, epsilon, True)
 
-                    # Calculate dimensions for output
-                    width = max(
-                        np.linalg.norm(rect[1] - rect[0]),
-                        np.linalg.norm(rect[3] - rect[2])
-                    )
-                    height = max(
-                        np.linalg.norm(rect[3] - rect[0]),
-                        np.linalg.norm(rect[2] - rect[1])
-                    )
+            # If we have a quadrilateral, attempt perspective correction
+            if len(approx) == 4:
+                # Get corner points
+                pts = approx.reshape(4, 2)
 
-                    # Destination points
-                    dst = np.array([
-                        [0, 0],
-                        [width - 1, 0],
-                        [width - 1, height - 1],
-                        [0, height - 1]
-                    ], dtype=np.float32)
+                # Order points: top-left, top-right, bottom-right, bottom-left
+                rect = self._order_points(pts)
 
-                    # Get perspective transform matrix
-                    M = cv2.getPerspectiveTransform(rect.astype(np.float32), dst)
-                    corrected = cv2.warpPerspective(gray, M, (int(width), int(height)))
+                # Calculate dimensions
+                width = int(max(np.linalg.norm(rect[0] - rect[1]), np.linalg.norm(rect[2] - rect[3])))
+                height = int(max(np.linalg.norm(rect[1] - rect[2]), np.linalg.norm(rect[3] - rect[0])))
 
-                    return corrected
-                except Exception as e:
-                    continue
+                # Define destination points
+                dst = np.array([[0, 0], [width - 1, 0], [width - 1, height - 1], [0, height - 1]], dtype=np.float32)
+
+                # Calculate perspective transform matrix
+                matrix = cv2.getPerspectiveTransform(rect.astype(np.float32), dst)
+
+                # Apply perspective transformation
+                corrected = cv2.warpPerspective(gray, matrix, (width, height))
+                return corrected
 
         return gray
 
     def _order_points(self, pts):
-        """Order points in clockwise order starting from top-left"""
-        # Sort by sum - top-left will have smallest sum, bottom-right largest
+        """Order points in the order: top-left, top-right, bottom-right, bottom-left"""
         rect = np.zeros((4, 2), dtype=np.float32)
-        s = pts.sum(axis=1)
-        rect[0] = pts[np.argmin(s)]  # top-left
-        rect[2] = pts[np.argmax(s)]  # bottom-right
 
-        # Sort by difference - top-right will have smallest diff, bottom-left largest
+        # Sum and difference of coordinates
+        s = pts.sum(axis=1)
         diff = np.diff(pts, axis=1)
-        rect[1] = pts[np.argmin(diff)]  # top-right
-        rect[3] = pts[np.argmax(diff)]  # bottom-left
+
+        # Top-left has smallest sum, bottom-right has largest sum
+        rect[0] = pts[np.argmin(s)]
+        rect[2] = pts[np.argmax(s)]
+
+        # Top-right has smallest difference, bottom-left has largest difference
+        rect[1] = pts[np.argmin(diff)]
+        rect[3] = pts[np.argmax(diff)]
 
         return rect
 
     def _enhance_for_barcode(self, image):
-        """Specific enhancement for barcode detection"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Apply barcode-specific enhancements"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Apply multiple enhancement techniques
-        # 1. Gaussian blur to reduce noise
-        blurred = cv2.GaussianBlur(gray, (3, 3), 0)
+        # Apply unsharp masking
+        blurred = cv2.GaussianBlur(gray, (0, 0), 2)
+        unsharp = cv2.addWeighted(gray, 1.5, blurred, -0.5, 0)
 
-        # 2. Unsharp masking for sharpening
-        unsharp_mask = cv2.addWeighted(gray, 1.5, blurred, -0.5, 0)
+        # Apply histogram equalization
+        equalized = cv2.equalizeHist(unsharp)
 
-        # 3. Histogram equalization
-        equalized = cv2.equalizeHist(unsharp_mask)
-
-        # 4. Morphological operations to enhance bar patterns
+        # Apply vertical morphological closing for horizontal barcodes
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 3))
-        enhanced = cv2.morphologyEx(equalized, cv2.MORPH_CLOSE, kernel)
+        closed = cv2.morphologyEx(equalized, cv2.MORPH_CLOSE, kernel)
 
-        return enhanced
+        return closed
 
     def _reduce_noise(self, image):
-        """Reduce noise while preserving barcode patterns"""
+        """Reduce image noise"""
         if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            # For color images, use bilateral filter
+            denoised = cv2.bilateralFilter(image, 9, 75, 75)
+            return cv2.cvtColor(denoised, cv2.COLOR_BGR2GRAY)
         else:
-            gray = image
-
-        # Use bilateral filter to reduce noise while keeping edges sharp
-        denoised = cv2.bilateralFilter(gray, 9, 75, 75)
-
-        # Apply median blur to remove salt and pepper noise
-        denoised = cv2.medianBlur(denoised, 3)
-
-        return denoised
+            # For grayscale images, use median filter
+            return cv2.medianBlur(image, 3)
 
     def _gamma_correction(self, image):
-        """Apply gamma correction for brightness adjustment"""
-        if len(image.shape) == 3:
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        else:
-            gray = image
+        """Apply gamma correction"""
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
 
-        # Try different gamma values
-        gamma_values = [0.5, 0.7, 1.0, 1.5, 2.0]
-        best_result = gray
+        # Apply gamma correction (gamma = 0.5 to brighten)
+        gamma = 0.5
+        inv_gamma = 1.0 / gamma
+        table = np.array([((i / 255.0) ** inv_gamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
 
-        for gamma in gamma_values:
-            # Build lookup table
-            inv_gamma = 1.0 / gamma
-            table = np.array([((i / 255.0) ** inv_gamma) * 255
-                              for i in np.arange(0, 256)]).astype("uint8")
-
-            # Apply gamma correction
-            corrected = cv2.LUT(gray, table)
-
-            # Simple metric: try to maximize contrast in potential barcode regions
-            contrast = np.std(corrected)
-            if contrast > np.std(best_result):
-                best_result = corrected
-
-        return best_result
+        corrected = cv2.LUT(gray, table)
+        return corrected
 
     def _create_visualization(self, image, result):
-        """Create detailed visualization of results"""
+        """Create visualization of detected codes"""
         vis_image = image.copy()
 
-        # Draw all regions in blue
-        for region in result.get('regions', []):
-            if len(region) >= 4:  # We need at least x, y, w, h
-                x, y, w, h = region[:4]
-                label = region[4] if len(region) > 4 else ""
-
-                cv2.rectangle(vis_image, (x, y), (x + w, y + h), (255, 0, 0), 2)
-                cv2.putText(vis_image, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5, (255, 0, 0), 1)
-
-        # Draw barcode regions in green
-        for region in result.get('barcode_regions', []):
-            if len(region) >= 4:
-                x, y, w, h = region[:4]
-                label = region[4] if len(region) > 4 else "Barcode"
-
-                cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                cv2.putText(vis_image, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5, (0, 255, 0), 1)
-
-        # Draw QR code regions in yellow
-        for region in result.get('qr_regions', []):
-            if len(region) >= 4:
-                x, y, w, h = region[:4]
-                label = region[4] if len(region) > 4 else "QR Code"
-
-                cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 255, 255), 2)
-                cv2.putText(vis_image, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5, (0, 255, 255), 1)
-
-        # Draw decoded codes in red
+        # Draw bounding boxes for detected codes
         for code in result['detected_codes']:
-            # Draw polygon if available
-            if 'polygon' in code and code['polygon']:
-                points = np.array([(int(p[0]), int(p[1])) for p in code['polygon']])
-                cv2.polylines(vis_image, [points], True, (0, 0, 255), 3)
+            if 'bbox' in code:
+                x, y, w, h = code['bbox']
+
+                # Choose color based on code type
+                if code['type'].lower() == 'qrcode':
+                    color = (0, 255, 0)  # Green for QR codes
+                else:
+                    color = (255, 0, 0)  # Blue for barcodes
+
+                # Draw bounding box
+                cv2.rectangle(vis_image, (x, y), (x + w, y + h), color, 2)
 
                 # Add label
-                x, y = points[0]
-
-            # Fall back to bbox if polygon not available
-            elif 'bbox' in code:
-                x, y, w, h = code['bbox']
-                cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 0, 255), 3)
-
-            else:
-                # Skip if no position info
-                continue
-
-            # Create detailed label with code data
-            info = []
-            info.append(f"{code['type']}")
-            info.append(code['data'][:30])  # Show more characters
-
-            if 'rotation' in code:
-                info.append(f"Rot: {code['rotation']}°")
-
-            if 'preprocess' in code:
-                info.append(f"Proc: {code['preprocess']}")
-
-            if 'image_variant' in code:
-                info.append(f"Var: {code['image_variant']}")
-
-            if 'detection_method' in code:
-                info.append(f"Method: {code['detection_method']}")
-
-            text = " | ".join(info)
-
-            # Add text with background for better readability
-            text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
-            cv2.rectangle(vis_image, (x, y - 25), (x + text_size[0], y), (0, 0, 0), -1)
-            cv2.putText(vis_image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                        0.5, (255, 255, 255), 1)
+                label = f"{code['type']}: {code['data'][:20]}..."
+                cv2.putText(vis_image, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
         # Save visualization
-        basename = os.path.basename(result['image_path'])
-        output_path = os.path.splitext(basename)[0] + '_detected.jpg'
+        filename = os.path.splitext(os.path.basename(result['image_path']))[0] + '_detected.jpg'
+        output_path = os.path.join(self.output_dir, filename)
         cv2.imwrite(output_path, vis_image)
 
         return output_path
 
-    def get_summary(self):
-        """Get detailed summary of last detection"""
-        if not self.last_result:
-            return "No detection performed yet"
+    def get_last_result(self):
+        """Get the last detection result"""
+        return self.last_result
 
-        result = self.last_result
-        summary = f"""
-    Enhanced Detection Summary:
-    - Image: {os.path.basename(result['image_path'])}
-    - Processing time: {result['processing_time']:.3f} seconds
-    - Total codes decoded: {result['total_codes']}
-    
-    Detected codes:
-    """
-        for i, code in enumerate(result['detected_codes'], 1):
-            code_info = [f"{i}. {code['type']}: {code['data']}"]
+    def save_result_json(self, filename=None):
+        """Save the last result as JSON"""
+        if self.last_result is None:
+            return None
 
-            if 'rotation' in code:
-                code_info.append(f"(Rotation: {code['rotation']}°)")
+        if filename is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"detection_result_{timestamp}.json"
 
-            if 'preprocess' in code:
-                code_info.append(f"(Preprocessing: {code['preprocess']})")
+        import json
+        output_path = os.path.join(self.output_dir, filename)
 
-            if 'image_variant' in code:
-                code_info.append(f"(Image variant: {code['image_variant']})")
+        # Create a JSON-serializable version of the result
+        json_result = self.last_result.copy()
+        json_result['processing_time'] = float(json_result['processing_time'])
 
-            if 'detection_method' in code:
-                code_info.append(f"(Method: {code['detection_method']})")
+        with open(output_path, 'w') as f:
+            json.dump(json_result, f, indent=2, default=str)
 
-            summary += " ".join(code_info) + "\n"
+        return output_path
 
-        if result['total_codes'] == 0:
-            summary += "\nNo codes detected. Consider:\n"
-            summary += "- Checking image quality and resolution\n"
-            summary += "- Ensuring codes are not damaged or partially obscured\n"
-            summary += "- Trying different lighting conditions\n"
 
-        return summary
+def main():
+    """Example usage of the Detector class"""
+    detector = Detector()
+
+    # Example detection
+    try:
+        result = detector.detect_codes('test_image.jpg')
+        print(f"Detection completed in {result['processing_time']:.3f} seconds")
+        print(f"Found {result['total_codes']} codes")
+
+        for code in result['detected_codes']:
+            print(f"- {code['type']}: {code['data']}")
+
+        # Save result
+        json_path = detector.save_result_json()
+        print(f"Result saved to: {json_path}")
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,83 @@
+{
+  "individual_method_success_rates": {
+    "title": "Individual Preprocessing Method Analysis",
+    "headers": [
+      "Method",
+      "Images Improved",
+      "Success Rate Increase",
+      "Processing Overhead"
+    ],
+    "data": [
+      {
+        "Method": "Standard Detection",
+        "Images Improved": 7,
+        "Success Rate Increase": "100.0%",
+        "Processing Overhead": "+0.005s"
+      }
+    ]
+  },
+  "category_effectiveness": {
+    "title": "Preprocessing Category Effectiveness",
+    "headers": [
+      "Category",
+      "Success Rate",
+      "Methods Count",
+      "Average Improvement"
+    ],
+    "data": [
+      {
+        "Category": "Detection Strategy",
+        "Success Rate": "100.0%",
+        "Methods Count": 1,
+        "Average Improvement": "11.00"
+      }
+    ]
+  },
+  "combined_preprocessing_effectiveness": {
+    "title": "Combined Preprocessing Effectiveness",
+    "headers": [
+      "Method",
+      "Images Improved",
+      "Success Rate Increase",
+      "Processing Overhead"
+    ],
+    "data": [
+      {
+        "Method": "CLAHE Enhancement",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Gaussian Blur",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Adaptive Threshold",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Morphological Operations",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Edge Enhancement",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Gamma Correction",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      }
+    ]
+  }
+}

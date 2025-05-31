@@ -1,0 +1,50 @@
+
+STREAMLIT VISUALIZATION FIX INSTRUCTIONS
+=======================================
+
+TO FIX THE AttributeError: 'Figure' object has no attribute 'update_xaxis'
+
+1. ADD this import at the top of your streamlit_app.py:
+   from streamlit_quick_fix import safe_plotly_chart, fixed_display_preprocessing_analysis, fixed_display_complete_experimental_results
+
+2. REPLACE these function calls in your streamlit_app.py:
+
+   OLD:
+   display_preprocessing_analysis(preprocessing_analysis)
+
+   NEW:
+   fixed_display_preprocessing_analysis(preprocessing_analysis)
+
+   OLD:
+   display_complete_experimental_results()
+
+   NEW:
+   fixed_display_complete_experimental_results()
+
+3. REPLACE any chart creation code that looks like this:
+
+   OLD:
+   fig = px.bar(df, x='Method', y='Success Rate (%)')
+   fig.update_xaxis(tickangle=45)
+   st.plotly_chart(fig)
+
+   NEW:
+   fig = safe_plotly_chart("bar", df, x='Method', y='Success Rate (%)')
+   if fig:
+       st.plotly_chart(fig, use_container_width=True)
+
+4. FOR ANY OTHER CHARTS, use the safe_plotly_chart function:
+
+   Bar Chart:
+   fig = safe_plotly_chart("bar", data, x='column1', y='column2', title='Title')
+
+   Scatter Plot:
+   fig = safe_plotly_chart("scatter", data, x='column1', y='column2', color='column3')
+
+   Pie Chart:
+   fig = safe_plotly_chart("pie", data, values='values_col', names='names_col')
+
+   Line Chart:
+   fig = safe_plotly_chart("line", data, x='column1', y='column2')
+
+5. SAVE your streamlit_app.py and restart the app

@@ -1,0 +1,3721 @@
+{
+  "batch_info": {
+    "folder_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1",
+    "total_images": 20,
+    "processed_successfully": 20,
+    "failed": 0,
+    "total_processing_time": 74.248052,
+    "average_time_per_image": 3.7124026,
+    "timestamp": "2025-05-23T15:50:02.385638",
+    "total_codes_found": 20
+  },
+  "failed_images": [],
+  "performance_analysis": {
+    "timing_stats": {
+      "fastest_time": 0.863328,
+      "slowest_time": 4.068733,
+      "average_time": 2.03917825,
+      "median_time": 1.882523,
+      "std_dev_time": 0.9733245094305327
+    },
+    "quality_stats": {
+      "average_quality_score": 57.94395562729892,
+      "quality_score_std": 5.331655125473236,
+      "average_contrast": 0.20179867331314325,
+      "average_sharpness": 667.2517478689265,
+      "average_noise_level": 1.7213539650161198,
+      "average_brightness": 126.70792116053262
+    },
+    "complexity_ranking": {
+      "fastest_images": [
+        {
+          "filename": "05102009082.jpg",
+          "processing_time": 0.863328,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 55.10402837756622,
+          "contrast_category": "medium",
+          "sharpness_category": "sharp",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009081.jpg",
+          "processing_time": 0.930247,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 51.431216498296585,
+          "contrast_category": "medium",
+          "sharpness_category": "moderate",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009114.jpg",
+          "processing_time": 1.000921,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 59.50528469411696,
+          "contrast_category": "medium",
+          "sharpness_category": "sharp",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009111.jpg",
+          "processing_time": 1.018072,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 53.80222083680552,
+          "contrast_category": "medium",
+          "sharpness_category": "moderate",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009106.jpg",
+          "processing_time": 1.025671,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 53.44224230964646,
+          "contrast_category": "medium",
+          "sharpness_category": "moderate",
+          "lighting_category": "optimal"
+        }
+      ],
+      "slowest_images": [
+        {
+          "filename": "05102009110.jpg",
+          "processing_time": 2.619278,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 54.26566674612254,
+          "contrast_category": "medium",
+          "sharpness_category": "moderate",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009108.jpg",
+          "processing_time": 2.763827,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 53.25646631901343,
+          "contrast_category": "medium",
+          "sharpness_category": "moderate",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009104.jpg",
+          "processing_time": 3.3336,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 1,
+          "quality_score": 62.93997981418492,
+          "contrast_category": "medium",
+          "sharpness_category": "sharp",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009105.jpg",
+          "processing_time": 4.01892,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 2,
+          "quality_score": 64.25316183776314,
+          "contrast_category": "medium",
+          "sharpness_category": "sharp",
+          "lighting_category": "optimal"
+        },
+        {
+          "filename": "05102009103.jpg",
+          "processing_time": 4.068733,
+          "megapixels": 1.92,
+          "codes_found": 1,
+          "strategies_used": 2,
+          "quality_score": 65.5798650346677,
+          "contrast_category": "medium",
+          "sharpness_category": "sharp",
+          "lighting_category": "optimal"
+        }
+      ]
+    },
+    "correlations": {
+      "time_vs_megapixels": -0.09940770749083584,
+      "time_vs_file_size": 0.06139484023782639,
+      "time_vs_codes_found": 0.0,
+      "time_vs_strategies": 0.686529597127159,
+      "time_vs_quality_score": 0.3789789464138694
+    },
+    "quality_impact_analysis": {
+      "resolution_impact": {
+        "medium": {
+          "sample_size": 17,
+          "avg_processing_time": 2.079823882352941,
+          "success_rate": 100.0,
+          "avg_megapixels": 1.92
+        },
+        "high": {
+          "sample_size": 3,
+          "avg_processing_time": 1.808853,
+          "success_rate": 100.0,
+          "avg_megapixels": 3.145728
+        }
+      },
+      "contrast_impact": {},
+      "sharpness_impact": {},
+      "lighting_impact": {},
+      "noise_impact": {},
+      "overall_quality_impact": {}
+    },
+    "efficiency_metrics": {
+      "average_pixels_per_second": 1291265.0614739272,
+      "average_time_per_megapixel": 1.007008196996053,
+      "images_with_codes_found": 20,
+      "detection_success_rate": 100.0
+    }
+  },
+  "detailed_results": [
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009081.jpg",
+      "processing_time": 0.930247,
+      "barcode_regions": [
+        [
+          736,
+          640,
+          389,
+          86,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902030187590",
+          "bbox": [
+            736,
+            640,
+            389,
+            86
+          ],
+          "polygon": [
+            [
+              736,
+              713
+            ],
+            [
+              1068,
+              726
+            ],
+            [
+              1089,
+              696
+            ],
+            [
+              1125,
+              644
+            ],
+            [
+              1125,
+              640
+            ],
+            [
+              786,
+              643
+            ],
+            [
+              770,
+              665
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 5,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009081_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009081.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009081.jpg",
+        "file_size_mb": 0.2800941467285156,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.930247,
+        "time_per_megapixel": 0.4845036458333334,
+        "time_per_mb": 3.3211940016070822,
+        "pixels_per_second": 2063967.956897469
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009081.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.2800941467285156,
+        "contrast_metrics": {
+          "rms_contrast": 48.68662157396672,
+          "michelson_contrast": 0,
+          "weber_contrast": 0.6740460492525204,
+          "std_contrast": 0.19092792774104594,
+          "avg_local_contrast": 0.06281785221270052,
+          "normalized_contrast": 0.19092792774104594,
+          "contrast_category": "medium",
+          "dynamic_range": "254"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 476.1519048005983,
+          "avg_gradient_magnitude": 53.45674995955767,
+          "tenengrad": 25084991728.0,
+          "brenner": "66855843",
+          "normalized_variance": 15.561322226919767,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.3515740047870084,
+          "signal_to_noise_ratio": 17.847678986076076,
+          "local_noise_estimate": "7.472985",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 152.32555885416667,
+          "brightness_std": 48.68662157396672,
+          "lighting_uniformity": 0.31962214312686865,
+          "underexposed_ratio": 9.010416666666666e-05,
+          "overexposed_ratio": 0.0104953125,
+          "dynamic_range_utilization": 0.996078431372549,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "23.270367",
+          "line_count": 18989,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 50.748698958333335,
+          "avg_color_variance": 2479.6437235345757,
+          "grayscale_similarity": 0.9931721181772037,
+          "pil_brightness": 151.4290046875,
+          "pil_contrast": 49.53250868653502
+        },
+        "structural_metrics": {
+          "texture_variance": 6.1045209802853755,
+          "edge_density": 0.060024479166666665,
+          "entropy": 7.309119462422581,
+          "complexity_score": 0.298284907136922
+        },
+        "overall_quality_score": 51.431216498296585
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009082.jpg",
+      "processing_time": 0.863328,
+      "barcode_regions": [
+        [
+          492,
+          536,
+          557,
+          125,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902030187590",
+          "bbox": [
+            492,
+            536,
+            557,
+            125
+          ],
+          "polygon": [
+            [
+              492,
+              537
+            ],
+            [
+              523,
+              599
+            ],
+            [
+              555,
+              661
+            ],
+            [
+              1049,
+              558
+            ],
+            [
+              1038,
+              536
+            ],
+            [
+              771,
+              536
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 10,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009082_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009082.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009082.jpg",
+        "file_size_mb": 0.27283668518066406,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 0.863328,
+        "time_per_megapixel": 0.44965,
+        "time_per_mb": 3.1642665627180255,
+        "pixels_per_second": 2223951.962637607
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009082.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.27283668518066406,
+        "contrast_metrics": {
+          "rms_contrast": 49.55026587418235,
+          "michelson_contrast": 62.5,
+          "weber_contrast": 0.6578776239392707,
+          "std_contrast": 0.19431476813404844,
+          "avg_local_contrast": 0.06864861178325886,
+          "normalized_contrast": 0.19431476813404844,
+          "contrast_category": "medium",
+          "dynamic_range": "250"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 627.5723334243755,
+          "avg_gradient_magnitude": 59.24471861158304,
+          "tenengrad": 35113969844.0,
+          "brenner": "62564453",
+          "normalized_variance": 15.962623304394013,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.3159159914597356,
+          "signal_to_noise_ratio": 18.021789293909315,
+          "local_noise_estimate": "8.845851",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 153.81111145833333,
+          "brightness_std": 49.55026587418235,
+          "lighting_uniformity": 0.3221501060903865,
+          "underexposed_ratio": 4.6875e-06,
+          "overexposed_ratio": 0.006508333333333333,
+          "dynamic_range_utilization": 0.9803921568627451,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.363657",
+          "line_count": 19799,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 57.89239583333333,
+          "avg_color_variance": 2784.116744807143,
+          "grayscale_similarity": 0.9814983185087958,
+          "pil_brightness": 153.5491640625,
+          "pil_contrast": 52.30783712425799
+        },
+        "structural_metrics": {
+          "texture_variance": 5.739456840276694,
+          "edge_density": 0.061075520833333334,
+          "entropy": 7.3764557563476085,
+          "complexity_score": 0.30121948290157696
+        },
+        "overall_quality_score": 55.10402837756622
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009083.jpg",
+      "processing_time": 1.643212,
+      "barcode_regions": [
+        [
+          437,
+          574,
+          502,
+          289,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902030187590",
+          "bbox": [
+            437,
+            574,
+            502,
+            289
+          ],
+          "polygon": [
+            [
+              437,
+              735
+            ],
+            [
+              437,
+              857
+            ],
+            [
+              682,
+              863
+            ],
+            [
+              939,
+              860
+            ],
+            [
+              939,
+              764
+            ],
+            [
+              938,
+              612
+            ],
+            [
+              937,
+              574
+            ],
+            [
+              696,
+              574
+            ],
+            [
+              438,
+              575
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 10,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009083_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009083.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009083.jpg",
+        "file_size_mb": 0.24466991424560547,
+        "dimensions": {
+          "width": 1200,
+          "height": 1600
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 0.75
+      },
+      "performance_metrics": {
+        "processing_time": 1.643212,
+        "time_per_megapixel": 0.8558395833333333,
+        "time_per_mb": 6.716036195404493,
+        "pixels_per_second": 1168443.2684279326
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009083.jpg",
+        "resolution": {
+          "width": 1200,
+          "height": 1600,
+          "megapixels": 1.92,
+          "aspect_ratio": 0.75,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.24466991424560547,
+        "contrast_metrics": {
+          "rms_contrast": 46.39943304054767,
+          "michelson_contrast": 35.285714285714285,
+          "weber_contrast": 0.7018104190145057,
+          "std_contrast": 0.1819585609433242,
+          "avg_local_contrast": 0.05606154955433805,
+          "normalized_contrast": 0.1819585609433242,
+          "contrast_category": "medium",
+          "dynamic_range": "247"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 260.7483134532095,
+          "avg_gradient_magnitude": 48.088784748556776,
+          "tenengrad": 18291464502.0,
+          "brenner": "55849338",
+          "normalized_variance": 14.368000772708243,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 0.8570647915541254,
+          "signal_to_noise_ratio": 21.774451661951314,
+          "local_noise_estimate": "5.921915",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 149.84042708333334,
+          "brightness_std": 46.39943304054767,
+          "lighting_uniformity": 0.30965897484223504,
+          "underexposed_ratio": 3.125e-06,
+          "overexposed_ratio": 0.009858854166666667,
+          "dynamic_range_utilization": 0.9686274509803922,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.944096",
+          "line_count": 13183,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 53.81324375,
+          "avg_color_variance": 2344.527859074677,
+          "grayscale_similarity": 0.9860440127441791,
+          "pil_brightness": 150.1775484375,
+          "pil_contrast": 47.90639818087032
+        },
+        "structural_metrics": {
+          "texture_variance": 5.565727484928114,
+          "edge_density": 0.05229114583333333,
+          "entropy": 7.344283172777686,
+          "complexity_score": 0.2964940491370444
+        },
+        "overall_quality_score": 46.70622634940497
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009101.jpg",
+      "processing_time": 2.478322,
+      "barcode_regions": [
+        [
+          707,
+          505,
+          427,
+          122,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "8023222032262",
+          "bbox": [
+            707,
+            505,
+            427,
+            122
+          ],
+          "polygon": [
+            [
+              707,
+              505
+            ],
+            [
+              707,
+              583
+            ],
+            [
+              708,
+              627
+            ],
+            [
+              1134,
+              622
+            ],
+            [
+              1134,
+              620
+            ],
+            [
+              1133,
+              578
+            ],
+            [
+              1131,
+              524
+            ],
+            [
+              1130,
+              508
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 8,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009101_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009101.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009101.jpg",
+        "file_size_mb": 0.29811573028564453,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.478322,
+        "time_per_megapixel": 1.2907927083333333,
+        "time_per_mb": 8.31328825763523,
+        "pixels_per_second": 774717.7324011973
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009101.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.29811573028564453,
+        "contrast_metrics": {
+          "rms_contrast": 43.51201361066657,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.7185985624410616,
+          "std_contrast": 0.1706353474928101,
+          "avg_local_contrast": 0.05826075825038066,
+          "normalized_contrast": 0.1706353474928101,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 483.46898228450397,
+          "avg_gradient_magnitude": 58.966982988297325,
+          "tenengrad": 22004740532.0,
+          "brenner": "83914222",
+          "normalized_variance": 20.18474471897831,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.3367165719757432,
+          "signal_to_noise_ratio": 17.735159003509846,
+          "local_noise_estimate": "7.5003824",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 93.798328125,
+          "brightness_std": 43.51201361066657,
+          "lighting_uniformity": 0.4638890103955845,
+          "underexposed_ratio": 0.0026848958333333334,
+          "overexposed_ratio": 0.0012760416666666666,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "23.08616",
+          "line_count": 28645,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 35.720852083333334,
+          "avg_color_variance": 1871.476012167407,
+          "grayscale_similarity": 0.989147807918931,
+          "pil_brightness": 95.37645173611111,
+          "pil_contrast": 43.24532164692649
+        },
+        "structural_metrics": {
+          "texture_variance": 5.52161306329183,
+          "edge_density": 0.12172083333333333,
+          "entropy": 7.306916895354284,
+          "complexity_score": 0.3228633653010177
+        },
+        "overall_quality_score": 49.72935490775123
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009102.jpg",
+      "processing_time": 1.239421,
+      "barcode_regions": [
+        [
+          583,
+          567,
+          498,
+          142,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "8023222032262",
+          "bbox": [
+            583,
+            567,
+            498,
+            142
+          ],
+          "polygon": [
+            [
+              583,
+              567
+            ],
+            [
+              583,
+              577
+            ],
+            [
+              584,
+              655
+            ],
+            [
+              585,
+              705
+            ],
+            [
+              586,
+              709
+            ],
+            [
+              1081,
+              702
+            ],
+            [
+              1081,
+              686
+            ],
+            [
+              1079,
+              628
+            ],
+            [
+              1076,
+              572
+            ],
+            [
+              823,
+              569
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009102_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009102.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009102.jpg",
+        "file_size_mb": 0.3683280944824219,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.239421,
+        "time_per_megapixel": 0.6455317708333335,
+        "time_per_mb": 3.3649917520998396,
+        "pixels_per_second": 1549110.4314030502
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009102.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3683280944824219,
+        "contrast_metrics": {
+          "rms_contrast": 50.54326853101798,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.9338111426766807,
+          "std_contrast": 0.1982088962000705,
+          "avg_local_contrast": 0.08163877566155787,
+          "normalized_contrast": 0.1982088962000705,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 789.229720440748,
+          "avg_gradient_magnitude": 82.88104977393705,
+          "tenengrad": 35601160470.0,
+          "brenner": "108725669",
+          "normalized_variance": 19.37316250772784,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.917194985797605,
+          "signal_to_noise_ratio": 14.757523161010779,
+          "local_noise_estimate": "9.502197",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 131.8639625,
+          "brightness_std": 50.54326853101798,
+          "lighting_uniformity": 0.3832985720493419,
+          "underexposed_ratio": 0.00040989583333333335,
+          "overexposed_ratio": 0.0005973958333333334,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "23.269596",
+          "line_count": 34437,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 32.8107828125,
+          "avg_color_variance": 2500.674606042935,
+          "grayscale_similarity": 0.9815272274727322,
+          "pil_brightness": 134.41785711805554,
+          "pil_contrast": 49.97911182776698
+        },
+        "structural_metrics": {
+          "texture_variance": 5.76355019988037,
+          "edge_density": 0.16750677083333335,
+          "entropy": 7.591757452450176,
+          "complexity_score": 0.3518665193062114
+        },
+        "overall_quality_score": 62.08422729296795
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009103.jpg",
+      "processing_time": 4.068733,
+      "barcode_regions": [
+        [
+          791,
+          947,
+          564,
+          88,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [
+        [
+          0,
+          0,
+          1200,
+          1600,
+          "rotation_0"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_45"
+        ],
+        [
+          0,
+          0,
+          1600,
+          1200,
+          "rotation_90"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_135"
+        ],
+        [
+          0,
+          0,
+          1200,
+          1600,
+          "rotation_180"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_225"
+        ],
+        [
+          0,
+          0,
+          1600,
+          1200,
+          "rotation_270"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_315"
+        ]
+      ],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "8023222032262",
+          "bbox": [
+            791,
+            947,
+            564,
+            88
+          ],
+          "polygon": [
+            [
+              791,
+              947
+            ],
+            [
+              791,
+              949
+            ],
+            [
+              792,
+              957
+            ],
+            [
+              803,
+              1035
+            ],
+            [
+              1355,
+              1030
+            ],
+            [
+              1349,
+              988
+            ],
+            [
+              1345,
+              962
+            ],
+            [
+              1343,
+              950
+            ]
+          ],
+          "rotation": 45,
+          "detection_method": "rotation",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "rotation_detection"
+        ],
+        "methods_successful": [
+          "rotation_detection"
+        ],
+        "method_success_details": {
+          "rotation_detection": {
+            "codes_found": 4,
+            "method_type": "rotation"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009103_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009103.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009103.jpg",
+        "file_size_mb": 0.41265010833740234,
+        "dimensions": {
+          "width": 1200,
+          "height": 1600
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 0.75
+      },
+      "performance_metrics": {
+        "processing_time": 4.068733,
+        "time_per_megapixel": 2.1191317708333335,
+        "time_per_mb": 9.860007104792059,
+        "pixels_per_second": 471891.3725722479
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 2,
+        "preprocessing_complexity": "none",
+        "rotation_attempts": 1
+      },
+      "quality_metrics": {
+        "filename": "05102009103.jpg",
+        "resolution": {
+          "width": 1200,
+          "height": 1600,
+          "megapixels": 1.92,
+          "aspect_ratio": 0.75,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.41265010833740234,
+        "contrast_metrics": {
+          "rms_contrast": 50.039279407169076,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.8740862322425307,
+          "std_contrast": 0.19623246826340815,
+          "avg_local_contrast": 0.09386666052759406,
+          "normalized_contrast": 0.19623246826340815,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 976.7243890592168,
+          "avg_gradient_magnitude": 95.31924852475457,
+          "tenengrad": 41561066612.0,
+          "brenner": "124741311",
+          "normalized_variance": 18.40227347926412,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.400321349378322,
+          "signal_to_noise_ratio": 12.841913937075347,
+          "local_noise_estimate": "10.261813",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 136.0663109375,
+          "brightness_std": 50.039279407169076,
+          "lighting_uniformity": 0.3677565670914225,
+          "underexposed_ratio": 0.0002671875,
+          "overexposed_ratio": 0.0008713541666666667,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.948643",
+          "line_count": 39040,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 23.876766145833333,
+          "avg_color_variance": 2511.6955999980673,
+          "grayscale_similarity": 0.990830803403662,
+          "pil_brightness": 137.42553489583335,
+          "pil_contrast": 50.11069021750168
+        },
+        "structural_metrics": {
+          "texture_variance": 5.828166940181209,
+          "edge_density": 0.1978609375,
+          "entropy": 7.558149685314588,
+          "complexity_score": 0.36274983320750254
+        },
+        "overall_quality_score": 65.5798650346677
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009104.jpg",
+      "processing_time": 3.3336,
+      "barcode_regions": [
+        [
+          560,
+          553,
+          563,
+          162,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "8023222032262",
+          "bbox": [
+            560,
+            553,
+            563,
+            162
+          ],
+          "polygon": [
+            [
+              560,
+              673
+            ],
+            [
+              560,
+              715
+            ],
+            [
+              1123,
+              706
+            ],
+            [
+              1123,
+              664
+            ],
+            [
+              1121,
+              554
+            ],
+            [
+              563,
+              553
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009104_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009104.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009104.jpg",
+        "file_size_mb": 0.38520240783691406,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 3.3336,
+        "time_per_megapixel": 1.73625,
+        "time_per_mb": 8.65415151146036,
+        "pixels_per_second": 575953.9236861051
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009104.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.38520240783691406,
+        "contrast_metrics": {
+          "rms_contrast": 51.42760359559444,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.9351278199947578,
+          "std_contrast": 0.2016768768454684,
+          "avg_local_contrast": 0.08986399498414206,
+          "normalized_contrast": 0.2016768768454684,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 827.5040832430003,
+          "avg_gradient_magnitude": 88.37484543848346,
+          "tenengrad": 37404337248.0,
+          "brenner": "115486957",
+          "normalized_variance": 20.070678218423176,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.1190749886803877,
+          "signal_to_noise_ratio": 13.824346078706323,
+          "local_noise_estimate": "9.601121",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 131.77424114583334,
+          "brightness_std": 51.42760359559444,
+          "lighting_uniformity": 0.3902705350333225,
+          "underexposed_ratio": 0.0005067708333333334,
+          "overexposed_ratio": 0.0005270833333333333,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "23.453669",
+          "line_count": 37415,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 28.424383854166667,
+          "avg_color_variance": 2685.5787321783873,
+          "grayscale_similarity": 0.9858907301576785,
+          "pil_brightness": 133.2203640625,
+          "pil_contrast": 51.819100505983535
+        },
+        "structural_metrics": {
+          "texture_variance": 5.772401679609107,
+          "edge_density": 0.1826375,
+          "entropy": 7.616812861158586,
+          "complexity_score": 0.35885865434383524
+        },
+        "overall_quality_score": 62.93997981418492
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009105.jpg",
+      "processing_time": 4.01892,
+      "barcode_regions": [
+        [
+          726,
+          933,
+          567,
+          18,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [
+        [
+          0,
+          0,
+          1600,
+          1200,
+          "rotation_0"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_45"
+        ],
+        [
+          0,
+          0,
+          1200,
+          1600,
+          "rotation_90"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_135"
+        ],
+        [
+          0,
+          0,
+          1600,
+          1200,
+          "rotation_180"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_225"
+        ],
+        [
+          0,
+          0,
+          1200,
+          1600,
+          "rotation_270"
+        ],
+        [
+          0,
+          0,
+          1979,
+          1979,
+          "rotation_315"
+        ]
+      ],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "8023222032262",
+          "bbox": [
+            726,
+            933,
+            567,
+            18
+          ],
+          "polygon": [
+            [
+              726,
+              933
+            ],
+            [
+              731,
+              951
+            ],
+            [
+              1293,
+              942
+            ],
+            [
+              1290,
+              934
+            ]
+          ],
+          "rotation": 45,
+          "detection_method": "rotation",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "rotation_detection"
+        ],
+        "methods_successful": [
+          "rotation_detection"
+        ],
+        "method_success_details": {
+          "rotation_detection": {
+            "codes_found": 4,
+            "method_type": "rotation"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009105_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009105.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009105.jpg",
+        "file_size_mb": 0.39214038848876953,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 4.01892,
+        "time_per_megapixel": 2.0931875,
+        "time_per_mb": 10.248676540277097,
+        "pixels_per_second": 477740.2884356992
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 2,
+        "preprocessing_complexity": "none",
+        "rotation_attempts": 1
+      },
+      "quality_metrics": {
+        "filename": "05102009105.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.39214038848876953,
+        "contrast_metrics": {
+          "rms_contrast": 52.74296494644742,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.8788258916145559,
+          "std_contrast": 0.206835156652735,
+          "avg_local_contrast": 0.09022412546640178,
+          "normalized_contrast": 0.206835156652735,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 902.8140381708525,
+          "avg_gradient_magnitude": 90.50735858111844,
+          "tenengrad": 40248927354.0,
+          "brenner": "114311806",
+          "normalized_variance": 20.49629828789418,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.19817620276119,
+          "signal_to_noise_ratio": 13.628647073778888,
+          "local_noise_estimate": "9.983666",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 135.72306041666667,
+          "brightness_std": 52.74296494644742,
+          "lighting_uniformity": 0.3886072476153112,
+          "underexposed_ratio": 0.000134375,
+          "overexposed_ratio": 0.004455729166666667,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.442978",
+          "line_count": 36688,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 26.9138515625,
+          "avg_color_variance": 2823.0033002755367,
+          "grayscale_similarity": 0.9901658387503453,
+          "pil_brightness": 135.66583003472223,
+          "pil_contrast": 53.13180559927476
+        },
+        "structural_metrics": {
+          "texture_variance": 5.697890311523437,
+          "edge_density": 0.175203125,
+          "entropy": 7.620532623370121,
+          "complexity_score": 0.3560221600857252
+        },
+        "overall_quality_score": 64.25316183776314
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009106.jpg",
+      "processing_time": 1.025671,
+      "barcode_regions": [
+        [
+          459,
+          544,
+          530,
+          161,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902580453022",
+          "bbox": [
+            459,
+            544,
+            530,
+            161
+          ],
+          "polygon": [
+            [
+              459,
+              545
+            ],
+            [
+              459,
+              581
+            ],
+            [
+              460,
+              649
+            ],
+            [
+              461,
+              705
+            ],
+            [
+              725,
+              698
+            ],
+            [
+              989,
+              690
+            ],
+            [
+              989,
+              680
+            ],
+            [
+              988,
+              662
+            ],
+            [
+              981,
+              544
+            ],
+            [
+              720,
+              544
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 8,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009106_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009106.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009106.jpg",
+        "file_size_mb": 0.33611392974853516,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.025671,
+        "time_per_megapixel": 0.5342036458333334,
+        "time_per_mb": 3.0515575500466743,
+        "pixels_per_second": 1871945.2923988297
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009106.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.33611392974853516,
+        "contrast_metrics": {
+          "rms_contrast": 44.811325674143454,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.8340630276958201,
+          "std_contrast": 0.17573068891820962,
+          "avg_local_contrast": 0.07244709461827094,
+          "normalized_contrast": 0.17573068891820962,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 493.0719761729035,
+          "avg_gradient_magnitude": 59.970390336670086,
+          "tenengrad": 23062674002.0,
+          "brenner": "91834439",
+          "normalized_variance": 14.442742114092011,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.4683230104418286,
+          "signal_to_noise_ratio": 16.63834330525308,
+          "local_noise_estimate": "7.4185843",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 139.03557083333334,
+          "brightness_std": 44.811325674143454,
+          "lighting_uniformity": 0.32230115937640386,
+          "underexposed_ratio": 0.003926041666666667,
+          "overexposed_ratio": 0.0066244791666666665,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.953997",
+          "line_count": 32606,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 56.03587604166667,
+          "avg_color_variance": 2244.035458074264,
+          "grayscale_similarity": 0.9818008161661437,
+          "pil_brightness": 137.55037326388887,
+          "pil_contrast": 47.342123335838494
+        },
+        "structural_metrics": {
+          "texture_variance": 6.187898932712401,
+          "edge_density": 0.10186354166666667,
+          "entropy": 7.32450858111041,
+          "complexity_score": 0.3156001254262884
+        },
+        "overall_quality_score": 53.44224230964646
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009108.jpg",
+      "processing_time": 2.763827,
+      "barcode_regions": [
+        [
+          607,
+          473,
+          500,
+          164,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902580453022",
+          "bbox": [
+            607,
+            473,
+            500,
+            164
+          ],
+          "polygon": [
+            [
+              607,
+              617
+            ],
+            [
+              607,
+              637
+            ],
+            [
+              1107,
+              632
+            ],
+            [
+              1107,
+              596
+            ],
+            [
+              1106,
+              512
+            ],
+            [
+              1105,
+              484
+            ],
+            [
+              1104,
+              476
+            ],
+            [
+              610,
+              473
+            ],
+            [
+              609,
+              493
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 8,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009108_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009108.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009108.jpg",
+        "file_size_mb": 0.334075927734375,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.763827,
+        "time_per_megapixel": 1.4394932291666667,
+        "time_per_mb": 8.273050437197405,
+        "pixels_per_second": 694688.9222805913
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009108.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.334075927734375,
+        "contrast_metrics": {
+          "rms_contrast": 43.719048176122975,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.81462901877783,
+          "std_contrast": 0.17144724774950187,
+          "avg_local_contrast": 0.06892469076881973,
+          "normalized_contrast": 0.17144724774950187,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 498.7504720389513,
+          "avg_gradient_magnitude": 59.30151363476271,
+          "tenengrad": 23001545068.0,
+          "brenner": "91549230",
+          "normalized_variance": 13.601570738072315,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.455403636482213,
+          "signal_to_noise_ratio": 16.553835334522166,
+          "local_noise_estimate": "7.4747543",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 140.524590625,
+          "brightness_std": 43.719048176122975,
+          "lighting_uniformity": 0.3111131509558381,
+          "underexposed_ratio": 0.002163020833333333,
+          "overexposed_ratio": 0.006978645833333333,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.71106",
+          "line_count": 30605,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 53.9875609375,
+          "avg_color_variance": 2113.6950815001633,
+          "grayscale_similarity": 0.9785084116689301,
+          "pil_brightness": 139.69915850694443,
+          "pil_contrast": 45.9624528918122
+        },
+        "structural_metrics": {
+          "texture_variance": 6.13460053083333,
+          "edge_density": 0.10145625,
+          "entropy": 7.318984484744841,
+          "complexity_score": 0.31522845619385653
+        },
+        "overall_quality_score": 53.25646631901343
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009110.jpg",
+      "processing_time": 2.619278,
+      "barcode_regions": [
+        [
+          610,
+          592,
+          366,
+          116,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902580453022",
+          "bbox": [
+            610,
+            592,
+            366,
+            116
+          ],
+          "polygon": [
+            [
+              610,
+              665
+            ],
+            [
+              610,
+              705
+            ],
+            [
+              976,
+              708
+            ],
+            [
+              976,
+              596
+            ],
+            [
+              975,
+              592
+            ],
+            [
+              612,
+              595
+            ],
+            [
+              611,
+              625
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009110_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009110.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009110.jpg",
+        "file_size_mb": 0.3034982681274414,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.619278,
+        "time_per_megapixel": 1.3642072916666668,
+        "time_per_mb": 8.630289774504227,
+        "pixels_per_second": 733026.4294206266
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009110.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3034982681274414,
+        "contrast_metrics": {
+          "rms_contrast": 50.631123758774976,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 0.9849904142362715,
+          "std_contrast": 0.1985534265049999,
+          "avg_local_contrast": 0.05261281270059342,
+          "normalized_contrast": 0.1985534265049999,
+          "contrast_category": "medium",
+          "dynamic_range": "253"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 424.87025410924394,
+          "avg_gradient_magnitude": 52.75609603857469,
+          "tenengrad": 18756526226.0,
+          "brenner": "80011534",
+          "normalized_variance": 20.112822579545657,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.3131072136780015,
+          "signal_to_noise_ratio": 17.989368129879278,
+          "local_noise_estimate": "6.9558372",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 127.45653489583333,
+          "brightness_std": 50.631123758774976,
+          "lighting_uniformity": 0.3972422740046588,
+          "underexposed_ratio": 0.001734375,
+          "overexposed_ratio": 1.1458333333333333e-05,
+          "dynamic_range_utilization": 0.9921568627450981,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.783278",
+          "line_count": 22462,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 55.27515104166667,
+          "avg_color_variance": 2644.6454741523607,
+          "grayscale_similarity": 0.9806113977438866,
+          "pil_brightness": 128.90406354166666,
+          "pil_contrast": 51.410831936159354
+        },
+        "structural_metrics": {
+          "texture_variance": 6.053866430715873,
+          "edge_density": 0.0830390625,
+          "entropy": 7.269031228916104,
+          "complexity_score": 0.3059859120772753
+        },
+        "overall_quality_score": 54.26566674612254
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009111.jpg",
+      "processing_time": 1.018072,
+      "barcode_regions": [
+        [
+          816,
+          612,
+          197,
+          58,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902580453022",
+          "bbox": [
+            816,
+            612,
+            197,
+            58
+          ],
+          "polygon": [
+            [
+              816,
+              665
+            ],
+            [
+              994,
+              670
+            ],
+            [
+              1010,
+              622
+            ],
+            [
+              1013,
+              612
+            ],
+            [
+              833,
+              617
+            ],
+            [
+              832,
+              619
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009111_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009111.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009111.jpg",
+        "file_size_mb": 0.3044271469116211,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.018072,
+        "time_per_megapixel": 0.5302458333333334,
+        "time_per_mb": 3.3442221244991623,
+        "pixels_per_second": 1885917.695408576
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009111.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3044271469116211,
+        "contrast_metrics": {
+          "rms_contrast": 50.15524946831657,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.031350128774011,
+          "std_contrast": 0.19668725281692773,
+          "avg_local_contrast": 0.05074590534809156,
+          "normalized_contrast": 0.19668725281692773,
+          "contrast_category": "medium",
+          "dynamic_range": "254"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 426.16467849608074,
+          "avg_gradient_magnitude": 50.758310153811024,
+          "tenengrad": 17031576572.0,
+          "brenner": "80004231",
+          "normalized_variance": 20.117956079614956,
+          "sharpness_category": "moderate"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.3831935407909364,
+          "signal_to_noise_ratio": 17.568893856663205,
+          "local_noise_estimate": "6.80102",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 125.03999010416666,
+          "brightness_std": 50.15524946831657,
+          "lighting_uniformity": 0.40111367112660434,
+          "underexposed_ratio": 0.0008994791666666667,
+          "overexposed_ratio": 2.2916666666666667e-05,
+          "dynamic_range_utilization": 0.996078431372549,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.522076",
+          "line_count": 22788,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 55.14012239583333,
+          "avg_color_variance": 2597.4253105715065,
+          "grayscale_similarity": 0.9742346369969096,
+          "pil_brightness": 127.76772916666668,
+          "pil_contrast": 50.9601519543095
+        },
+        "structural_metrics": {
+          "texture_variance": 6.00669822913954,
+          "edge_density": 0.08126354166666666,
+          "entropy": 7.272919231174612,
+          "complexity_score": 0.30542008878258875
+        },
+        "overall_quality_score": 53.80222083680552
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009114.jpg",
+      "processing_time": 1.000921,
+      "barcode_regions": [
+        [
+          590,
+          421,
+          504,
+          353,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            590,
+            421,
+            504,
+            353
+          ],
+          "polygon": [
+            [
+              590,
+              765
+            ],
+            [
+              590,
+              769
+            ],
+            [
+              591,
+              771
+            ],
+            [
+              1092,
+              774
+            ],
+            [
+              1093,
+              750
+            ],
+            [
+              1094,
+              588
+            ],
+            [
+              1094,
+              480
+            ],
+            [
+              1093,
+              422
+            ],
+            [
+              840,
+              421
+            ],
+            [
+              601,
+              421
+            ],
+            [
+              596,
+              567
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 10,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009114_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009114.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009114.jpg",
+        "file_size_mb": 0.3139505386352539,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.000921,
+        "time_per_megapixel": 0.5213130208333333,
+        "time_per_mb": 3.1881486948581563,
+        "pixels_per_second": 1918233.3071241388
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009114.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3139505386352539,
+        "contrast_metrics": {
+          "rms_contrast": 58.72583231272696,
+          "michelson_contrast": 0,
+          "weber_contrast": 1.2347111150464019,
+          "std_contrast": 0.23029738161853708,
+          "avg_local_contrast": 0.08873073671639409,
+          "normalized_contrast": 0.23029738161853708,
+          "contrast_category": "medium",
+          "dynamic_range": "254"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 691.092273123254,
+          "avg_gradient_magnitude": 71.18614118746186,
+          "tenengrad": 40850840352.0,
+          "brenner": "77509035",
+          "normalized_variance": 30.22313884040988,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.4288619848853368,
+          "signal_to_noise_ratio": 17.428565185512017,
+          "local_noise_estimate": "9.200089",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 114.10870885416666,
+          "brightness_std": 58.72583231272696,
+          "lighting_uniformity": 0.5146481184690277,
+          "underexposed_ratio": 0.00016354166666666668,
+          "overexposed_ratio": 0.004659375,
+          "dynamic_range_utilization": 0.996078431372549,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.29078",
+          "line_count": 23482,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 60.849925,
+          "avg_color_variance": 3201.982695358016,
+          "grayscale_similarity": 0.9704139137530265,
+          "pil_brightness": 118.4628607638889,
+          "pil_contrast": 56.36269896889942
+        },
+        "structural_metrics": {
+          "texture_variance": 6.0009824999728725,
+          "edge_density": 0.07930104166666667,
+          "entropy": 7.4189793652475,
+          "complexity_score": 0.3101121723384471
+        },
+        "overall_quality_score": 59.50528469411696
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009115.jpg",
+      "processing_time": 1.070671,
+      "barcode_regions": [
+        [
+          582,
+          513,
+          96,
+          581,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            582,
+            513,
+            96,
+            581
+          ],
+          "polygon": [
+            [
+              582,
+              1094
+            ],
+            [
+              642,
+              1049
+            ],
+            [
+              678,
+              1021
+            ],
+            [
+              641,
+              751
+            ],
+            [
+              587,
+              513
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009115_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009115.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009115.jpg",
+        "file_size_mb": 0.3582315444946289,
+        "dimensions": {
+          "width": 1200,
+          "height": 1600
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 0.75
+      },
+      "performance_metrics": {
+        "processing_time": 1.070671,
+        "time_per_megapixel": 0.5576411458333334,
+        "time_per_mb": 2.9887680648292347,
+        "pixels_per_second": 1793267.9599989166
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009115.jpg",
+        "resolution": {
+          "width": 1200,
+          "height": 1600,
+          "megapixels": 1.92,
+          "aspect_ratio": 0.75,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3582315444946289,
+        "contrast_metrics": {
+          "rms_contrast": 58.01699770214374,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.2348474977451938,
+          "std_contrast": 0.2275176380476225,
+          "avg_local_contrast": 0.0914519152826795,
+          "normalized_contrast": 0.2275176380476225,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 922.5061307432458,
+          "avg_gradient_magnitude": 75.6914472830639,
+          "tenengrad": 42247669812.0,
+          "brenner": "87747538",
+          "normalized_variance": 29.499741512736207,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.132437578215693,
+          "signal_to_noise_ratio": 13.8685780672417,
+          "local_noise_estimate": "9.831098",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 114.1017453125,
+          "brightness_std": 58.01699770214374,
+          "lighting_uniformity": 0.5084672240836259,
+          "underexposed_ratio": 0.00021197916666666666,
+          "overexposed_ratio": 0.0014630208333333333,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.821465",
+          "line_count": 29221,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 55.76453854166667,
+          "avg_color_variance": 3150.951221025412,
+          "grayscale_similarity": 0.9774747921453768,
+          "pil_brightness": 117.02772829861112,
+          "pil_contrast": 55.95167249688328
+        },
+        "structural_metrics": {
+          "texture_variance": 6.094593094094784,
+          "edge_density": 0.09615416666666667,
+          "entropy": 7.37896143743987,
+          "complexity_score": 0.31535555836348467
+        },
+        "overall_quality_score": 64.51646963175209
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009117.jpg",
+      "processing_time": 2.458866,
+      "barcode_regions": [
+        [
+          604,
+          518,
+          537,
+          224,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            604,
+            518,
+            537,
+            224
+          ],
+          "polygon": [
+            [
+              604,
+              683
+            ],
+            [
+              825,
+              725
+            ],
+            [
+              1067,
+              742
+            ],
+            [
+              1076,
+              716
+            ],
+            [
+              1136,
+              540
+            ],
+            [
+              1141,
+              518
+            ],
+            [
+              665,
+              519
+            ],
+            [
+              654,
+              547
+            ],
+            [
+              642,
+              579
+            ],
+            [
+              628,
+              617
+            ],
+            [
+              606,
+              677
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009117_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009117.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009117.jpg",
+        "file_size_mb": 0.3419523239135742,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.458866,
+        "time_per_megapixel": 1.2806593750000002,
+        "time_per_mb": 7.19066907298299,
+        "pixels_per_second": 780847.7566487966
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009117.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.3419523239135742,
+        "contrast_metrics": {
+          "rms_contrast": 53.60839750817151,
+          "michelson_contrast": 0,
+          "weber_contrast": 1.1468022866917122,
+          "std_contrast": 0.21022900983596668,
+          "avg_local_contrast": 0.0848953143485794,
+          "normalized_contrast": 0.21022900983596668,
+          "contrast_category": "medium",
+          "dynamic_range": "254"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 751.5877722740613,
+          "avg_gradient_magnitude": 71.42713069356634,
+          "tenengrad": 37327432102.0,
+          "brenner": "85887446",
+          "normalized_variance": 24.19454814149842,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.7411764262648126,
+          "signal_to_noise_ratio": 15.658043592386885,
+          "local_noise_estimate": "9.178377",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 118.781315625,
+          "brightness_std": 53.60839750817151,
+          "lighting_uniformity": 0.45132011904478775,
+          "underexposed_ratio": 2.8645833333333333e-05,
+          "overexposed_ratio": 0.0042203125,
+          "dynamic_range_utilization": 0.996078431372549,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.542929",
+          "line_count": 27070,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 47.610071875,
+          "avg_color_variance": 2714.1369313043997,
+          "grayscale_similarity": 0.9787842389454434,
+          "pil_brightness": 121.82462725694444,
+          "pil_contrast": 51.97156311316687
+        },
+        "structural_metrics": {
+          "texture_variance": 6.046426244058156,
+          "edge_density": 0.09017135416666666,
+          "entropy": 7.322856137235479,
+          "complexity_score": 0.31085703960031885
+        },
+        "overall_quality_score": 60.93660636178001
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009118.jpg",
+      "processing_time": 2.335305,
+      "barcode_regions": [
+        [
+          616,
+          452,
+          427,
+          296,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            616,
+            452,
+            427,
+            296
+          ],
+          "polygon": [
+            [
+              616,
+              719
+            ],
+            [
+              616,
+              741
+            ],
+            [
+              1041,
+              748
+            ],
+            [
+              1042,
+              662
+            ],
+            [
+              1043,
+              518
+            ],
+            [
+              1043,
+              452
+            ],
+            [
+              625,
+              453
+            ],
+            [
+              624,
+              463
+            ],
+            [
+              621,
+              543
+            ],
+            [
+              618,
+              647
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 10,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009118_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009118.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009118.jpg",
+        "file_size_mb": 0.32147789001464844,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.335305,
+        "time_per_megapixel": 1.2163046875,
+        "time_per_mb": 7.264278734358962,
+        "pixels_per_second": 822162.4156159475
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009118.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.32147789001464844,
+        "contrast_metrics": {
+          "rms_contrast": 58.126839943787715,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.3124449291783276,
+          "std_contrast": 0.2279483919364224,
+          "avg_local_contrast": 0.09044168071275153,
+          "normalized_contrast": 0.2279483919364224,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 808.2353486051363,
+          "avg_gradient_magnitude": 75.91067864748969,
+          "tenengrad": 46071666122.0,
+          "brenner": "77988523",
+          "normalized_variance": 30.639709329475146,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.480206468922469,
+          "signal_to_noise_ratio": 16.989238808367194,
+          "local_noise_estimate": "9.973045",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 110.27289635416666,
+          "brightness_std": 58.126839943787715,
+          "lighting_uniformity": 0.527118103047734,
+          "underexposed_ratio": 0.0004578125,
+          "overexposed_ratio": 0.0030729166666666665,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.412407",
+          "line_count": 25082,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 51.76081666666666,
+          "avg_color_variance": 3213.1248312536936,
+          "grayscale_similarity": 0.9795974399065361,
+          "pil_brightness": 113.16876475694444,
+          "pil_contrast": 56.58147548934297
+        },
+        "structural_metrics": {
+          "texture_variance": 5.852031682935924,
+          "edge_density": 0.0846734375,
+          "entropy": 7.45636963654968,
+          "complexity_score": 0.3136587973211011
+        },
+        "overall_quality_score": 61.722096276642645
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009119.jpg",
+      "processing_time": 2.488612,
+      "barcode_regions": [
+        [
+          549,
+          626,
+          513,
+          179,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            549,
+            626,
+            513,
+            179
+          ],
+          "polygon": [
+            [
+              549,
+              633
+            ],
+            [
+              551,
+              637
+            ],
+            [
+              618,
+              767
+            ],
+            [
+              637,
+              803
+            ],
+            [
+              639,
+              805
+            ],
+            [
+              877,
+              798
+            ],
+            [
+              1062,
+              714
+            ],
+            [
+              1059,
+              706
+            ],
+            [
+              1021,
+              626
+            ],
+            [
+              793,
+              626
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009119_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009119.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009119.jpg",
+        "file_size_mb": 0.33420562744140625,
+        "dimensions": {
+          "width": 1600,
+          "height": 1200
+        },
+        "pixels": 1920000,
+        "megapixels": 1.92,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 2.488612,
+        "time_per_megapixel": 1.2961520833333333,
+        "time_per_mb": 7.446349778883689,
+        "pixels_per_second": 771514.4024058392
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009119.jpg",
+        "resolution": {
+          "width": 1600,
+          "height": 1200,
+          "megapixels": 1.92,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 1920000,
+          "category": "medium"
+        },
+        "file_size_mb": 0.33420562744140625,
+        "contrast_metrics": {
+          "rms_contrast": 55.346788773102624,
+          "michelson_contrast": 0,
+          "weber_contrast": 1.2691812977414472,
+          "std_contrast": 0.2170462304827554,
+          "avg_local_contrast": 0.08161973295346994,
+          "normalized_contrast": 0.2170462304827554,
+          "contrast_category": "medium",
+          "dynamic_range": "254"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 695.357991352725,
+          "avg_gradient_magnitude": 69.58963058023382,
+          "tenengrad": 35456830870.0,
+          "brenner": "82232259",
+          "normalized_variance": 27.259247791851926,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.7082909653201777,
+          "signal_to_noise_ratio": 15.80156384911537,
+          "local_noise_estimate": "8.762959",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 112.37533125,
+          "brightness_std": 55.346788773102624,
+          "lighting_uniformity": 0.4925172469567481,
+          "underexposed_ratio": 0.00025833333333333334,
+          "overexposed_ratio": 0.0027307291666666665,
+          "dynamic_range_utilization": 0.996078431372549,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.54367",
+          "line_count": 27009,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 52.378459375,
+          "avg_color_variance": 2959.1912554706505,
+          "grayscale_similarity": 0.9770359913625614,
+          "pil_brightness": 114.99026059027779,
+          "pil_contrast": 54.341264077575204
+        },
+        "structural_metrics": {
+          "texture_variance": 5.826687907734103,
+          "edge_density": 0.08729947916666667,
+          "entropy": 7.4539194515118465,
+          "complexity_score": 0.3146165717355929
+        },
+        "overall_quality_score": 58.7293175217433
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009120.jpg",
+      "processing_time": 1.997872,
+      "barcode_regions": [
+        [
+          706,
+          698,
+          564,
+          257,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            706,
+            698,
+            564,
+            257
+          ],
+          "polygon": [
+            [
+              706,
+              723
+            ],
+            [
+              706,
+              727
+            ],
+            [
+              728,
+              813
+            ],
+            [
+              756,
+              921
+            ],
+            [
+              766,
+              955
+            ],
+            [
+              1039,
+              942
+            ],
+            [
+              1270,
+              844
+            ],
+            [
+              1268,
+              836
+            ],
+            [
+              1261,
+              810
+            ],
+            [
+              1234,
+              716
+            ],
+            [
+              972,
+              698
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 8,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009120_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009120.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009120.jpg",
+        "file_size_mb": 0.7676877975463867,
+        "dimensions": {
+          "width": 2048,
+          "height": 1536
+        },
+        "pixels": 3145728,
+        "megapixels": 3.145728,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.997872,
+        "time_per_megapixel": 0.6351064046223959,
+        "time_per_mb": 2.602453766212535,
+        "pixels_per_second": 1574539.3098256544
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009120.jpg",
+        "resolution": {
+          "width": 2048,
+          "height": 1536,
+          "megapixels": 3.145728,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 3145728,
+          "category": "high"
+        },
+        "file_size_mb": 0.7676877975463867,
+        "contrast_metrics": {
+          "rms_contrast": 51.99858264253588,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.1959328681716705,
+          "std_contrast": 0.2039160103628858,
+          "avg_local_contrast": 0.07748490727958218,
+          "normalized_contrast": 0.2039160103628858,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 775.2902884879659,
+          "avg_gradient_magnitude": 63.013528121841155,
+          "tenengrad": 43766347278.0,
+          "brenner": "136244230",
+          "normalized_variance": 23.28423034096274,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.293235511494287,
+          "signal_to_noise_ratio": 13.239793895094504,
+          "local_noise_estimate": "8.419264",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 116.12376848856609,
+          "brightness_std": 51.99858264253588,
+          "lighting_uniformity": 0.44778586950229593,
+          "underexposed_ratio": 5.5631001790364586e-05,
+          "overexposed_ratio": 0.0008172988891601562,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.964651",
+          "line_count": 46507,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 58.82536602020264,
+          "avg_color_variance": 2522.2841402465624,
+          "grayscale_similarity": 0.969170457538942,
+          "pil_brightness": 119.8927190568712,
+          "pil_contrast": 50.024024560441795
+        },
+        "structural_metrics": {
+          "texture_variance": 6.50135914722665,
+          "edge_density": 0.10542138417561848,
+          "entropy": 7.359803065167437,
+          "complexity_score": 0.31835620938844306
+        },
+        "overall_quality_score": 60.40241505602266
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009121.jpg",
+      "processing_time": 1.767174,
+      "barcode_regions": [
+        [
+          764,
+          728,
+          621,
+          214,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            764,
+            728,
+            621,
+            214
+          ],
+          "polygon": [
+            [
+              764,
+              803
+            ],
+            [
+              1297,
+              942
+            ],
+            [
+              1312,
+              906
+            ],
+            [
+              1365,
+              778
+            ],
+            [
+              1385,
+              728
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 8,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009121_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009121.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009121.jpg",
+        "file_size_mb": 0.7894992828369141,
+        "dimensions": {
+          "width": 2048,
+          "height": 1536
+        },
+        "pixels": 3145728,
+        "megapixels": 3.145728,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.767174,
+        "time_per_megapixel": 0.5617694854736328,
+        "time_per_mb": 2.2383478217358217,
+        "pixels_per_second": 1780089.5667319687
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009121.jpg",
+        "resolution": {
+          "width": 2048,
+          "height": 1536,
+          "megapixels": 3.145728,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 3145728,
+          "category": "high"
+        },
+        "file_size_mb": 0.7894992828369141,
+        "contrast_metrics": {
+          "rms_contrast": 52.756183173768626,
+          "michelson_contrast": 253.0,
+          "weber_contrast": 1.1878588549599876,
+          "std_contrast": 0.20688699283830833,
+          "avg_local_contrast": 0.07923888803636052,
+          "normalized_contrast": 0.20688699283830833,
+          "contrast_category": "medium",
+          "dynamic_range": "253"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 919.3357617629118,
+          "avg_gradient_magnitude": 64.06409927240456,
+          "tenengrad": 47045386324.0,
+          "brenner": "136606215",
+          "normalized_variance": 23.879534239867727,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 2.6587256356780515,
+          "signal_to_noise_ratio": 11.94420367564405,
+          "local_noise_estimate": "8.92859",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 116.552308400472,
+          "brightness_std": 52.756183173768626,
+          "lighting_uniformity": 0.4526395392573364,
+          "underexposed_ratio": 9.886423746744792e-05,
+          "overexposed_ratio": 0.0024433135986328125,
+          "dynamic_range_utilization": 0.9921568627450981,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "22.177431",
+          "line_count": 47072,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 48.79576873779297,
+          "avg_color_variance": 2623.1503820350185,
+          "grayscale_similarity": 0.9837578825393117,
+          "pil_brightness": 118.8041951921251,
+          "pil_contrast": 51.06551263027692
+        },
+        "structural_metrics": {
+          "texture_variance": 6.668559328030425,
+          "edge_density": 0.10820166269938152,
+          "entropy": 7.348718695053968,
+          "complexity_score": 0.3190576729241173
+        },
+        "overall_quality_score": 63.77955827256375
+      }
+    },
+    {
+      "image_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009122.jpg",
+      "processing_time": 1.661513,
+      "barcode_regions": [
+        [
+          628,
+          469,
+          826,
+          463,
+          "EAN13"
+        ]
+      ],
+      "qr_regions": [],
+      "regions": [],
+      "detected_codes": [
+        {
+          "type": "EAN13",
+          "data": "4902520242204",
+          "bbox": [
+            628,
+            469,
+            826,
+            463
+          ],
+          "polygon": [
+            [
+              628,
+              871
+            ],
+            [
+              1454,
+              932
+            ],
+            [
+              1451,
+              772
+            ],
+            [
+              1448,
+              666
+            ],
+            [
+              1443,
+              494
+            ],
+            [
+              1442,
+              474
+            ],
+            [
+              631,
+              469
+            ],
+            [
+              630,
+              475
+            ]
+          ],
+          "image_variant": "original_color",
+          "detection_method": "standard",
+          "category": "Barcode"
+        }
+      ],
+      "total_codes": 1,
+      "preprocessing_analytics": {
+        "methods_attempted": [
+          "standard_detection"
+        ],
+        "methods_successful": [
+          "standard_detection"
+        ],
+        "method_success_details": {
+          "standard_detection": {
+            "codes_found": 9,
+            "method_type": "basic"
+          }
+        },
+        "total_methods_tried": 1,
+        "successful_methods_count": 1,
+        "success_rate": 100.0
+      },
+      "visualization_path": "results/05102009122_detected.jpg",
+      "file_metadata": {
+        "filename": "05102009122.jpg",
+        "full_path": "downloaded_images/barcodes/BarcodeDatasets/Dataset1/05102009122.jpg",
+        "file_size_mb": 0.7096805572509766,
+        "dimensions": {
+          "width": 2048,
+          "height": 1536
+        },
+        "pixels": 3145728,
+        "megapixels": 3.145728,
+        "aspect_ratio": 1.3333333333333333
+      },
+      "performance_metrics": {
+        "processing_time": 1.661513,
+        "time_per_megapixel": 0.5281807581583658,
+        "time_per_mb": 2.3412125117757885,
+        "pixels_per_second": 1893291.2351573536
+      },
+      "complexity_indicators": {
+        "detection_strategies_used": 1,
+        "preprocessing_complexity": "basic",
+        "rotation_attempts": 0
+      },
+      "quality_metrics": {
+        "filename": "05102009122.jpg",
+        "resolution": {
+          "width": 2048,
+          "height": 1536,
+          "megapixels": 3.145728,
+          "aspect_ratio": 1.3333333333333333,
+          "total_pixels": 3145728,
+          "category": "high"
+        },
+        "file_size_mb": 0.7096805572509766,
+        "contrast_metrics": {
+          "rms_contrast": 58.37541418384342,
+          "michelson_contrast": 1.0,
+          "weber_contrast": 1.2254675853036783,
+          "std_contrast": 0.22892319287781732,
+          "avg_local_contrast": 0.07432911038569197,
+          "normalized_contrast": 0.22892319287781732,
+          "contrast_category": "medium",
+          "dynamic_range": "255"
+        },
+        "sharpness_metrics": {
+          "laplacian_variance": 594.558245335545,
+          "avg_gradient_magnitude": 56.656701454567816,
+          "tenengrad": 38565490338.0,
+          "brenner": "126627810",
+          "normalized_variance": 29.740005106382892,
+          "sharpness_category": "sharp"
+        },
+        "noise_metrics": {
+          "estimated_noise_level": 1.8680784417544767,
+          "signal_to_noise_ratio": 15.094037249903849,
+          "local_noise_estimate": "7.6906657",
+          "noise_category": "low"
+        },
+        "lighting_metrics": {
+          "mean_brightness": 114.58266194661458,
+          "brightness_std": 58.37541418384342,
+          "lighting_uniformity": 0.5094611452738043,
+          "underexposed_ratio": 0.0004164377848307292,
+          "overexposed_ratio": 0.001460711161295573,
+          "dynamic_range_utilization": 1.0,
+          "lighting_category": "optimal"
+        },
+        "distortion_metrics": {
+          "avg_angle_deviation": "21.916553",
+          "line_count": 43788,
+          "corner_count": 100,
+          "distortion_category": "severe"
+        },
+        "color_metrics": {
+          "avg_saturation": 56.58509190877279,
+          "avg_color_variance": 3179.273930687678,
+          "grayscale_similarity": 0.9738914121526918,
+          "pil_brightness": 118.25966517130534,
+          "pil_contrast": 56.20776843345235
+        },
+        "structural_metrics": {
+          "texture_variance": 6.675272523124381,
+          "edge_density": 0.09510866800944011,
+          "entropy": 7.415753731401985,
+          "complexity_score": 0.3163344903070442
+        },
+        "overall_quality_score": 56.69270840716618
+      }
+    }
+  ],
+  "error_log": []
+}

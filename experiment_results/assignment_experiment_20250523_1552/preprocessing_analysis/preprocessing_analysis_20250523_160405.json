@@ -1,0 +1,286 @@
+{
+  "overall_statistics": {
+    "total_images": 215,
+    "images_requiring_preprocessing": 1,
+    "images_solved_by_standard": 209,
+    "images_solved_by_rotation": 5,
+    "images_solved_by_preprocessing": 1,
+    "images_solved_by_fine_rotation": 0
+  },
+  "method_effectiveness": {
+    "standard_detection": {
+      "images_attempted": 209,
+      "images_successful": 209,
+      "success_rate": 100.0,
+      "total_codes_found": 1498,
+      "codes_per_attempt": 7.167464114832536,
+      "improvement_factor": 7.167464114832536,
+      "method_type": "detection_strategy",
+      "processing_overhead": 0.005,
+      "effectiveness_score": 143.34928229665073
+    },
+    "rotation_detection": {
+      "images_attempted": 5,
+      "images_successful": 5,
+      "success_rate": 100.0,
+      "total_codes_found": 17,
+      "codes_per_attempt": 3.4,
+      "improvement_factor": 3.4,
+      "method_type": "rotation",
+      "processing_overhead": 0.1,
+      "effectiveness_score": 3.4
+    },
+    "original": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "basic",
+      "processing_overhead": 0.001,
+      "effectiveness_score": 0.0
+    },
+    "grayscale": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "basic",
+      "processing_overhead": 0.005,
+      "effectiveness_score": 0.0
+    },
+    "blur": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "basic",
+      "processing_overhead": 0.01,
+      "effectiveness_score": 0.0
+    },
+    "sharpen": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "enhancement",
+      "processing_overhead": 0.015,
+      "effectiveness_score": 0.0
+    },
+    "adaptive_threshold": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "thresholding",
+      "processing_overhead": 0.02,
+      "effectiveness_score": 0.0
+    },
+    "edge_enhance": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "morphological",
+      "processing_overhead": 0.025,
+      "effectiveness_score": 0.0
+    },
+    "morphology": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "morphological",
+      "processing_overhead": 0.03,
+      "effectiveness_score": 0.0
+    },
+    "contrast_enhance": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "enhancement",
+      "processing_overhead": 0.02,
+      "effectiveness_score": 0.0
+    },
+    "perspective_correction": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "advanced",
+      "processing_overhead": 0.05,
+      "effectiveness_score": 0.0
+    },
+    "barcode_enhancement": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "advanced",
+      "processing_overhead": 0.035,
+      "effectiveness_score": 0.0
+    },
+    "noise_reduction": {
+      "images_attempted": 1,
+      "images_successful": 0,
+      "success_rate": 0.0,
+      "total_codes_found": 0,
+      "codes_per_attempt": 0.0,
+      "improvement_factor": 0.0,
+      "method_type": "noise_reduction",
+      "processing_overhead": 0.025,
+      "effectiveness_score": 0.0
+    },
+    "gamma_correction": {
+      "images_attempted": 1,
+      "images_successful": 1,
+      "success_rate": 100.0,
+      "total_codes_found": 2,
+      "codes_per_attempt": 2.0,
+      "improvement_factor": 2.0,
+      "method_type": "enhancement",
+      "processing_overhead": 0.015,
+      "effectiveness_score": 13.333333333333334
+    }
+  },
+  "category_analysis": {
+    "detection_strategy": {
+      "success_rate": 100.0,
+      "average_codes_per_attempt": 7.167464114832536,
+      "total_attempts": 209,
+      "total_successes": 209,
+      "methods_count": 1,
+      "methods": [
+        "standard_detection"
+      ]
+    },
+    "rotation": {
+      "success_rate": 100.0,
+      "average_codes_per_attempt": 3.4,
+      "total_attempts": 5,
+      "total_successes": 5,
+      "methods_count": 1,
+      "methods": [
+        "rotation_detection"
+      ]
+    },
+    "basic": {
+      "success_rate": 0.0,
+      "average_codes_per_attempt": 0.0,
+      "total_attempts": 3,
+      "total_successes": 0,
+      "methods_count": 3,
+      "methods": [
+        "original",
+        "grayscale",
+        "blur"
+      ]
+    },
+    "enhancement": {
+      "success_rate": 33.33333333333333,
+      "average_codes_per_attempt": 0.6666666666666666,
+      "total_attempts": 3,
+      "total_successes": 1,
+      "methods_count": 3,
+      "methods": [
+        "sharpen",
+        "contrast_enhance",
+        "gamma_correction"
+      ]
+    },
+    "thresholding": {
+      "success_rate": 0.0,
+      "average_codes_per_attempt": 0.0,
+      "total_attempts": 1,
+      "total_successes": 0,
+      "methods_count": 1,
+      "methods": [
+        "adaptive_threshold"
+      ]
+    },
+    "morphological": {
+      "success_rate": 0.0,
+      "average_codes_per_attempt": 0.0,
+      "total_attempts": 2,
+      "total_successes": 0,
+      "methods_count": 2,
+      "methods": [
+        "edge_enhance",
+        "morphology"
+      ]
+    },
+    "advanced": {
+      "success_rate": 0.0,
+      "average_codes_per_attempt": 0.0,
+      "total_attempts": 2,
+      "total_successes": 0,
+      "methods_count": 2,
+      "methods": [
+        "perspective_correction",
+        "barcode_enhancement"
+      ]
+    },
+    "noise_reduction": {
+      "success_rate": 0.0,
+      "average_codes_per_attempt": 0.0,
+      "total_attempts": 1,
+      "total_successes": 0,
+      "methods_count": 1,
+      "methods": [
+        "noise_reduction"
+      ]
+    }
+  },
+  "processing_overhead_analysis": {
+    "standard": {
+      "average_time": 1.3440596076555025,
+      "median_time": 1.469566,
+      "min_time": 0.48431,
+      "max_time": 5.572626,
+      "sample_count": 209,
+      "time_overhead_vs_standard": 0.0
+    },
+    "rotation": {
+      "average_time": 4.5135233999999995,
+      "median_time": 3.564274,
+      "min_time": 2.861497,
+      "max_time": 6.745859,
+      "sample_count": 5,
+      "time_overhead_vs_standard": 3.169463792344497
+    },
+    "preprocessing": {
+      "average_time": 47.383814,
+      "median_time": 47.383814,
+      "min_time": 47.383814,
+      "max_time": 47.383814,
+      "sample_count": 1,
+      "time_overhead_vs_standard": 46.0397543923445
+    }
+  },
+  "method_combination_analysis": {},
+  "improvement_recommendations": [
+    "Most effective preprocessing method: standard_detection (success rate: 100.0%, effectiveness score: 143.35)",
+    "Most effective preprocessing category: detection_strategy (success rate: 100.0%)",
+    "High-overhead, low-benefit methods to review: perspective_correction, barcode_enhancement"
+  ]
+}

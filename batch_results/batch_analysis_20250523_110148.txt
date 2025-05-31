@@ -1,0 +1,49 @@
+BATCH BARCODE/QR CODE DETECTION REPORT
+==================================================
+
+Folder: temp_uploaded
+Total images: 20
+Successfully processed: 20
+Failed: 0
+Total batch time: 43.79 seconds
+Average time per image: 2.189 seconds
+
+PERFORMANCE ANALYSIS
+-------------------------
+Fastest processing time: 1.741s
+Slowest processing time: 2.448s
+Average processing time: 2.082s
+Detection success rate: 100.0%
+
+TOP 5 FASTEST IMAGES (Low Complexity)
+----------------------------------------
+1. PICT0018.JPG
+   Time: 1.741s, Megapixels: 6.6, Codes: 1, Strategies: 1
+2. PICT0012.JPG
+   Time: 1.884s, Megapixels: 6.6, Codes: 1, Strategies: 1
+3. PICT0016.JPG
+   Time: 1.888s, Megapixels: 6.6, Codes: 1, Strategies: 1
+4. PICT0013.JPG
+   Time: 1.898s, Megapixels: 6.6, Codes: 1, Strategies: 1
+5. PICT0010.JPG
+   Time: 1.929s, Megapixels: 6.6, Codes: 1, Strategies: 1
+
+TOP 5 SLOWEST IMAGES (High Complexity)
+----------------------------------------
+1. PICT0020.JPG
+   Time: 2.221s, Megapixels: 6.6, Codes: 1, Strategies: 1
+2. PICT0024.JPG
+   Time: 2.249s, Megapixels: 6.6, Codes: 1, Strategies: 1
+3. PICT0025.JPG
+   Time: 2.255s, Megapixels: 6.6, Codes: 1, Strategies: 1
+4. PICT0008.JPG
+   Time: 2.302s, Megapixels: 6.6, Codes: 1, Strategies: 1
+5. PICT0015.JPG
+   Time: 2.448s, Megapixels: 6.6, Codes: 1, Strategies: 1
+
+COMPLEXITY CORRELATIONS
+-------------------------
+Time vs Megapixels: -0.000
+Time vs File Size: 0.432
+Time vs Codes Found: 0.060
+Time vs Strategies Used: nan

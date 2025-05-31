@@ -1,0 +1,30 @@
+PREPROCESSING METHOD SUCCESS RATE ANALYSIS
+============================================================
+
+OVERALL STATISTICS:
+Total images processed: 7
+Images solved by standard detection: 7
+Images solved by rotation: 0
+Images requiring preprocessing: 0
+Standard detection success rate: 100.0%
+Rotation detection success rate: 0.0%
+Preprocessing required rate: 0.0%
+
+INDIVIDUAL METHOD EFFECTIVENESS:
+Method                    Attempts   Success Rate    Codes Found  Effectiveness
+--------------------------------------------------------------------------------
+standard_detection        7          100.0         % 77           220.00
+
+PREPROCESSING CATEGORY ANALYSIS:
+Category             Success Rate    Avg Codes/Attempt  Methods Count
+----------------------------------------------------------------------
+detection_strategy   100.0         % 11.00             1
+
+PROCESSING TIME OVERHEAD ANALYSIS:
+Strategy        Avg Time (s)    Sample Count    Overhead vs Standard
+-----------------------------------------------------------------
+standard        0.037          7               +0.000s
+
+RECOMMENDATIONS:
+1. Most effective preprocessing method: standard_detection (success rate: 100.0%, effectiveness score: 220.00)
+2. Most effective preprocessing category: detection_strategy (success rate: 100.0%)

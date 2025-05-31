@@ -1,0 +1,17 @@
+BATCH BARCODE/QR CODE DETECTION REPORT
+==================================================
+
+Folder: test_images
+Total images: 7
+Successfully processed: 7
+Failed: 0
+Total batch time: 0.65 seconds
+Average time per image: 0.092 seconds
+
+PERFORMANCE ANALYSIS
+-------------------------
+Fastest processing time: 0.025s
+Slowest processing time: 0.061s
+Average processing time: 0.038s
+Detection success rate: 100.0%
+

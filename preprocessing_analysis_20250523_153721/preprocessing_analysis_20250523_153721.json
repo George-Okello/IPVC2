@@ -1,0 +1,50 @@
+{
+  "overall_statistics": {
+    "total_images": 7,
+    "images_requiring_preprocessing": 0,
+    "images_solved_by_standard": 7,
+    "images_solved_by_rotation": 0,
+    "images_solved_by_preprocessing": 0,
+    "images_solved_by_fine_rotation": 0
+  },
+  "method_effectiveness": {
+    "standard_detection": {
+      "images_attempted": 7,
+      "images_successful": 7,
+      "success_rate": 100.0,
+      "total_codes_found": 77,
+      "codes_per_attempt": 11.0,
+      "improvement_factor": 11.0,
+      "method_type": "detection_strategy",
+      "processing_overhead": 0.005,
+      "effectiveness_score": 220.0
+    }
+  },
+  "category_analysis": {
+    "detection_strategy": {
+      "success_rate": 100.0,
+      "average_codes_per_attempt": 11.0,
+      "total_attempts": 7,
+      "total_successes": 7,
+      "methods_count": 1,
+      "methods": [
+        "standard_detection"
+      ]
+    }
+  },
+  "processing_overhead_analysis": {
+    "standard": {
+      "average_time": 0.04240157142857143,
+      "median_time": 0.033097,
+      "min_time": 0.026133,
+      "max_time": 0.06475,
+      "sample_count": 7,
+      "time_overhead_vs_standard": 0.0
+    }
+  },
+  "method_combination_analysis": {},
+  "improvement_recommendations": [
+    "Most effective preprocessing method: standard_detection (success rate: 100.0%, effectiveness score: 220.00)",
+    "Most effective preprocessing category: detection_strategy (success rate: 100.0%)"
+  ]
+}

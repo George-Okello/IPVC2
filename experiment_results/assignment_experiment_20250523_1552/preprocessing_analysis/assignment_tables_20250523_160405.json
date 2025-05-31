@@ -1,0 +1,203 @@
+{
+  "individual_method_success_rates": {
+    "title": "Individual Preprocessing Method Analysis",
+    "headers": [
+      "Method",
+      "Images Improved",
+      "Success Rate Increase",
+      "Processing Overhead"
+    ],
+    "data": [
+      {
+        "Method": "Standard Detection",
+        "Images Improved": 209,
+        "Success Rate Increase": "100.0%",
+        "Processing Overhead": "+0.005s"
+      },
+      {
+        "Method": "Rotation Detection",
+        "Images Improved": 5,
+        "Success Rate Increase": "100.0%",
+        "Processing Overhead": "+0.100s"
+      },
+      {
+        "Method": "Gamma Correction",
+        "Images Improved": 1,
+        "Success Rate Increase": "100.0%",
+        "Processing Overhead": "+0.015s"
+      },
+      {
+        "Method": "Original",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.001s"
+      },
+      {
+        "Method": "Grayscale",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.005s"
+      },
+      {
+        "Method": "Blur",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.010s"
+      },
+      {
+        "Method": "Sharpen",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.015s"
+      },
+      {
+        "Method": "Adaptive Threshold",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.020s"
+      },
+      {
+        "Method": "Edge Enhance",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.025s"
+      },
+      {
+        "Method": "Morphology",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.030s"
+      },
+      {
+        "Method": "Contrast Enhance",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.020s"
+      },
+      {
+        "Method": "Perspective Correction",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.050s"
+      },
+      {
+        "Method": "Barcode Enhancement",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.035s"
+      },
+      {
+        "Method": "Noise Reduction",
+        "Images Improved": 0,
+        "Success Rate Increase": "0.0%",
+        "Processing Overhead": "+0.025s"
+      }
+    ]
+  },
+  "category_effectiveness": {
+    "title": "Preprocessing Category Effectiveness",
+    "headers": [
+      "Category",
+      "Success Rate",
+      "Methods Count",
+      "Average Improvement"
+    ],
+    "data": [
+      {
+        "Category": "Detection Strategy",
+        "Success Rate": "100.0%",
+        "Methods Count": 1,
+        "Average Improvement": "7.17"
+      },
+      {
+        "Category": "Rotation",
+        "Success Rate": "100.0%",
+        "Methods Count": 1,
+        "Average Improvement": "3.40"
+      },
+      {
+        "Category": "Basic",
+        "Success Rate": "0.0%",
+        "Methods Count": 3,
+        "Average Improvement": "0.00"
+      },
+      {
+        "Category": "Enhancement",
+        "Success Rate": "33.3%",
+        "Methods Count": 3,
+        "Average Improvement": "0.67"
+      },
+      {
+        "Category": "Thresholding",
+        "Success Rate": "0.0%",
+        "Methods Count": 1,
+        "Average Improvement": "0.00"
+      },
+      {
+        "Category": "Morphological",
+        "Success Rate": "0.0%",
+        "Methods Count": 2,
+        "Average Improvement": "0.00"
+      },
+      {
+        "Category": "Advanced",
+        "Success Rate": "0.0%",
+        "Methods Count": 2,
+        "Average Improvement": "0.00"
+      },
+      {
+        "Category": "Noise Reduction",
+        "Success Rate": "0.0%",
+        "Methods Count": 1,
+        "Average Improvement": "0.00"
+      }
+    ]
+  },
+  "combined_preprocessing_effectiveness": {
+    "title": "Combined Preprocessing Effectiveness",
+    "headers": [
+      "Method",
+      "Images Improved",
+      "Success Rate Increase",
+      "Processing Overhead"
+    ],
+    "data": [
+      {
+        "Method": "CLAHE Enhancement",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.020s"
+      },
+      {
+        "Method": "Gaussian Blur",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Adaptive Threshold",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.020s"
+      },
+      {
+        "Method": "Morphological Operations",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Edge Enhancement",
+        "Images Improved": 0,
+        "Success Rate Increase": "+0.0%",
+        "Processing Overhead": "+0.000s"
+      },
+      {
+        "Method": "Gamma Correction",
+        "Images Improved": 1,
+        "Success Rate Increase": "+100.0%",
+        "Processing Overhead": "+0.015s"
+      }
+    ]
+  }
+}
